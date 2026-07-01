@@ -8,37 +8,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0}
 :root{
-  --paper:#FAF6EF; --paper-2:#F2EBDF; --panel:#FFFFFF;
+  --paper:#FAF6EF; --paper-2:#F1EADD; --panel:#FFFFFF;
   --ink:#211A18; --ink-soft:#5A4F49;
   --crimson:#6E1423; --crimson-deep:#4C0D18; --crimson-ink:#350912;
+  --plate-ink-a:#2C2226; --plate-ink-b:#160F13;
   --gold:#B5873A; --gold-ink:#8A6322; --gold-bright:#D8AE5A;
   --cream:#F4ECDD; --cream-soft:#D8CDBA;
   --line:#E4DACB; --line-dark:rgba(244,236,221,.16);
+  --keyline:rgba(216,174,90,.45);
   --maxw:1140px; --pad:clamp(1.25rem,5vw,4rem);
   --sp:clamp(4rem,9vw,7.25rem);
+  --grain:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='120'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3CfeColorMatrix%20type='saturate'%20values='0'/%3E%3C/filter%3E%3Crect%20width='120'%20height='120'%20filter='url(%23n)'%20opacity='0.5'/%3E%3C/svg%3E");
 }
 html,body{background:var(--paper);color:var(--ink);
   font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 h1,h2,h3,h4{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-optical-sizing:auto;
-  font-weight:500;line-height:1.06;letter-spacing:-.015em;margin:0}
+  font-weight:500;line-height:1.06;letter-spacing:-.015em;margin:0;
+  font-variant-numeric:oldstyle-nums;font-feature-settings:"onum" 1}
 p{margin:0 0 1.1em}
 a{color:inherit}
 img,svg{max-width:100%;display:block}
 .container{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
-.eyebrow{font-family:"Inter";font-weight:600;text-transform:uppercase;
-  letter-spacing:.2em;font-size:.72rem;color:var(--gold-ink);margin:0 0 1.1rem}
+.eyebrow{display:flex;align-items:center;gap:.62rem;font-family:"Inter";font-weight:600;
+  text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:var(--gold-ink);margin:0 0 1.1rem}
+.eyebrow::before{content:"";width:6px;height:6px;background:var(--gold);
+  transform:rotate(45deg);flex:0 0 auto}
 .eyebrow.on-dark{color:var(--gold-bright)}
+.eyebrow.on-dark::before{background:var(--gold-bright)}
 .lede{font-size:clamp(1.08rem,1.55vw,1.28rem);color:var(--ink-soft);line-height:1.62}
 .serif-it{font-family:"Fraunces";font-style:italic;font-weight:400}
+.nb{white-space:nowrap}
 
-/* skip link */
 .skip{position:absolute;left:-999px;top:0;background:var(--crimson);color:var(--cream);
   padding:.6rem 1rem;z-index:200;border-radius:0 0 6px 0}
 .skip:focus{left:0}
+:focus-visible{outline:2.5px solid var(--gold-bright);outline-offset:3px;border-radius:3px}
 
 /* ---------- seal ---------- */
 .seal{display:block}
@@ -54,16 +62,13 @@ img,svg{max-width:100%;display:block}
 
 /* ---------- header ---------- */
 .site-head{position:sticky;top:0;z-index:100;background:var(--crimson);
-  border-bottom:1px solid rgba(0,0,0,.18)}
-.head-row{display:flex;align-items:center;justify-content:space-between;
-  gap:1rem;height:70px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--cream)}
+  border-bottom:1px solid var(--keyline)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.brand{display:flex;align-items:center;gap:.72rem;text-decoration:none;color:var(--cream)}
 .brand .seal{width:38px;height:38px;color:var(--cream);flex:0 0 auto}
-.brand-name{font-family:"Fraunces";font-weight:500;font-size:1.18rem;
-  letter-spacing:-.01em;line-height:1}
-.brand-name small{display:block;font-family:"Inter";font-weight:600;
-  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold-bright);margin-top:.28rem}
+.brand-name{font-family:"Fraunces";font-weight:500;font-size:1.16rem;letter-spacing:-.01em;line-height:1}
+.brand-name small{display:block;font-family:"Inter";font-weight:600;font-size:.6rem;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin-top:.3rem}
 nav.primary{display:flex;align-items:center;gap:.3rem}
 nav.primary a{text-decoration:none;color:var(--cream);font-weight:500;font-size:.95rem;
   padding:.5rem .85rem;border-radius:5px;position:relative;transition:color .2s}
@@ -72,19 +77,18 @@ nav.primary a .u{position:absolute;left:.85rem;right:.85rem;bottom:.34rem;height
 nav.primary a:hover{color:#fff}
 nav.primary a:hover .u,nav.primary a.active .u{transform:scaleX(1)}
 nav.primary a.active{color:#fff}
-.book-btn{margin-left:.5rem;text-decoration:none;background:var(--gold);
-  color:var(--crimson-ink);font-weight:600;font-size:.9rem;padding:.6rem 1.15rem;
-  border-radius:6px;transition:background .2s,transform .2s}
+.book-btn{margin-left:.5rem;text-decoration:none;background:var(--gold);color:var(--crimson-ink);
+  font-weight:600;font-size:.9rem;padding:.6rem 1.15rem;border-radius:6px;
+  transition:background .2s,transform .2s}
 .book-btn:hover{background:var(--gold-bright);transform:translateY(-1px)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-dark);
-  color:var(--cream);width:42px;height:40px;border-radius:7px;cursor:pointer;align-items:center;justify-content:center}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-dark);color:var(--cream);
+  width:42px;height:40px;border-radius:7px;cursor:pointer;align-items:center;justify-content:center}
 .nav-toggle svg{width:20px;height:20px;stroke:var(--cream)}
-:focus-visible{outline:2.5px solid var(--gold-bright);outline-offset:3px;border-radius:3px}
 
 @media (max-width:780px){
   nav.primary{position:absolute;top:70px;left:0;right:0;background:var(--crimson-deep);
     flex-direction:column;align-items:stretch;gap:0;padding:.5rem var(--pad) 1.1rem;
-    border-bottom:1px solid rgba(0,0,0,.25);
+    border-bottom:1px solid var(--keyline);
     clip-path:inset(0 0 100% 0);transition:clip-path .3s ease;pointer-events:none}
   nav.primary.open{clip-path:inset(0 0 0 0);pointer-events:auto}
   nav.primary a{padding:.85rem .3rem;border-bottom:1px solid var(--line-dark)}
@@ -94,48 +98,48 @@ nav.primary a.active{color:#fff}
 }
 
 /* ---------- hero ---------- */
-.hero{background:radial-gradient(120% 120% at 78% 8%,#7d1a2a 0%,var(--crimson) 42%,var(--crimson-deep) 100%);
-  color:var(--cream);position:relative;overflow:hidden}
+.hero{color:var(--cream);position:relative;overflow:hidden;
+  background-image:var(--grain),radial-gradient(120% 120% at 78% 8%,#7d1a2a 0%,var(--crimson) 42%,var(--crimson-deep) 100%);
+  background-size:130px 130px,auto;background-blend-mode:soft-light,normal}
 .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.18) 100%)}
 .hero .container{position:relative;z-index:2;padding-top:clamp(3.5rem,8vw,6rem);
   padding-bottom:clamp(3.5rem,8vw,6rem)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2rem,5vw,4rem);align-items:center}
-.hero h1{font-size:clamp(2.9rem,7.3vw,5.6rem);font-weight:500;color:#fff;margin:0 0 .2em}
+.hero h1{font-size:clamp(2.9rem,7.3vw,5.6rem);font-weight:500;color:#fff;margin:0 0 .22em}
 .hero .sub{font-family:"Fraunces";font-style:italic;font-weight:400;
   font-size:clamp(1.3rem,2.7vw,2.05rem);line-height:1.22;color:var(--gold-bright);
-  max-width:20ch;margin:0 0 1.4rem}
+  max-width:30ch;text-wrap:balance;margin:0 0 1.4rem}
 .hero .lede{color:var(--cream);max-width:46ch;opacity:.92}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.9rem}
-.btn{text-decoration:none;font-weight:600;font-size:.97rem;padding:.85rem 1.5rem;
-  border-radius:7px;transition:transform .2s,background .2s,color .2s,border-color .2s;display:inline-block}
+.btn{text-decoration:none;font-weight:600;font-size:.97rem;padding:.85rem 1.5rem;border-radius:7px;
+  transition:transform .2s,background .2s,color .2s,border-color .2s;display:inline-block}
 .btn-gold{background:var(--gold);color:var(--crimson-ink)}
 .btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
 .btn-ghost{border:1.5px solid rgba(244,236,221,.45);color:var(--cream)}
 .btn-ghost:hover{border-color:var(--gold-bright);color:#fff;transform:translateY(-2px)}
 .hero-seal{width:min(230px,32vw);height:min(230px,32vw);color:var(--cream)}
-.hero-stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem;
-  padding-top:1.6rem;border-top:1px solid var(--line-dark)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem;padding-top:1.6rem;
+  border-top:1px solid var(--line-dark)}
 .hero-stats div{font-size:.86rem;color:var(--cream);opacity:.9}
 .hero-stats b{display:block;font-family:"Fraunces";font-style:normal;font-weight:500;
-  font-size:1.5rem;color:var(--gold-bright);opacity:1;line-height:1;margin-bottom:.25rem}
-@media (max-width:820px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-seal{display:none}
-}
+  font-variant-numeric:oldstyle-nums;font-size:1.55rem;color:var(--gold-bright);opacity:1;
+  line-height:1;margin-bottom:.25rem}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-seal{display:none}}
 
-/* page-top (interior heroes) */
-.ptop{background:radial-gradient(120% 140% at 85% 0%,#7d1a2a 0%,var(--crimson) 48%,var(--crimson-deep) 100%);
-  color:var(--cream)}
+/* page-top */
+.ptop{color:var(--cream);
+  background-image:var(--grain),radial-gradient(120% 140% at 85% 0%,#7d1a2a 0%,var(--crimson) 48%,var(--crimson-deep) 100%);
+  background-size:130px 130px,auto;background-blend-mode:soft-light,normal}
 .ptop .container{padding-top:clamp(3rem,6vw,4.5rem);padding-bottom:clamp(3rem,6vw,4.5rem)}
 .ptop h1{font-size:clamp(2.5rem,5.5vw,3.9rem);color:#fff;max-width:18ch}
 .ptop .lede{color:var(--cream);opacity:.92;max-width:54ch;margin-top:1rem}
 
-/* ---------- generic sections ---------- */
+/* sections */
 .section{padding-block:var(--sp)}
 .section.tight{padding-block:clamp(3rem,6vw,4.5rem)}
 .rule{height:0;border:0;border-top:1.5px solid var(--gold);width:54px;margin:0 0 1.4rem}
-.rule.dbl{border-top:1.5px solid var(--gold);position:relative;width:54px}
+.rule.dbl{position:relative;width:54px}
 .rule.dbl::after{content:"";position:absolute;left:0;top:4px;width:34px;border-top:1px solid var(--gold)}
 h2.big{font-size:clamp(2rem,4.2vw,3rem)}
 
@@ -143,114 +147,121 @@ h2.big{font-size:clamp(2rem,4.2vw,3rem)}
 .brief{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(2rem,5vw,4.5rem)}
 .brief .body p{font-size:1.06rem;color:var(--ink)}
 .brief .body p+p{color:var(--ink-soft)}
-.cred{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;
-  padding:1.6rem 1.7rem}
+.cred{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:1.6rem 1.7rem}
 .cred h3{font-size:.74rem;font-family:"Inter";font-weight:600;text-transform:uppercase;
   letter-spacing:.18em;color:var(--gold-ink);margin-bottom:1rem}
 .cred ul{list-style:none;margin:0;padding:0}
 .cred li{padding:.62rem 0;border-top:1px solid var(--line);font-size:.95rem;line-height:1.45}
 .cred li:first-child{border-top:0;padding-top:0}
 .cred li b{font-weight:600}
-.morelink{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;
-  text-decoration:none;color:var(--crimson);font-weight:600;font-size:.96rem}
+.morelink{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;text-decoration:none;
+  color:var(--crimson);font-weight:600;font-size:.96rem}
 .morelink .ar{transition:transform .2s}
 .morelink:hover{color:var(--gold-ink)}
 .morelink:hover .ar{transform:translateX(4px)}
 @media (max-width:760px){.brief{grid-template-columns:1fr}}
 
-/* talks list */
+/* talks */
 .section-alt{background:var(--paper-2);border-block:1px solid var(--line)}
-.head-2col{display:flex;justify-content:space-between;align-items:flex-end;
-  gap:1.5rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.head-2col{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;
+  flex-wrap:wrap;margin-bottom:2.6rem}
 .head-2col .lede{max-width:40ch}
 .talks{display:grid;gap:0}
-.talk{display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,3vw,2.4rem);
-  padding:2rem 0;border-top:1px solid var(--line);align-items:start}
+.talk{display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,3vw,2.4rem);padding:2rem 0;
+  border-top:1px solid var(--line);align-items:start}
 .talk:first-child{border-top:0}
 .talk .kw{font-family:"Fraunces";font-weight:500;font-size:1rem;color:var(--gold-ink);
   text-transform:uppercase;letter-spacing:.12em;padding-top:.4rem}
 .talk h3{font-size:clamp(1.35rem,2.4vw,1.85rem);margin-bottom:.55rem;color:var(--crimson)}
 .talk p{margin:0;color:var(--ink-soft);max-width:62ch}
-.audience{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--panel);
-  border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;
-  font-size:.97rem;color:var(--ink-soft)}
+.audience{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--panel);border:1px solid var(--line);
+  border-left:3px solid var(--gold);border-radius:0 10px 10px 0;font-size:.97rem;color:var(--ink-soft)}
 .audience b{color:var(--ink)}
 
-/* books grid */
-.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:clamp(1rem,2.4vw,1.6rem)}
-.book{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);
-  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-.book:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(53,9,18,.45)}
-.book .cover{padding:1.6rem 1.4rem 1.5rem;color:var(--cream);min-height:188px;
-  display:flex;flex-direction:column;justify-content:space-between;position:relative}
-.book .cover.c1{background:linear-gradient(160deg,#7d1a2a,var(--crimson-deep))}
-.book .cover.c2{background:linear-gradient(160deg,#2a4a45,#15302c)}
-.book .cover.c3{background:linear-gradient(160deg,#8a6322,#5a3f15)}
-.book .cover.c4{background:linear-gradient(160deg,#3a3340,#221d28)}
-.book .cover .ct{font-family:"Fraunces";font-weight:500;font-size:1.22rem;line-height:1.12}
-.book .cover .cmeta{font-size:.72rem;letter-spacing:.04em;opacity:.85;margin-top:.6rem}
-.book .cover .seal-min{position:absolute;top:1.1rem;right:1.1rem;width:24px;height:24px;
-  border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;
-  font-family:"Fraunces";font-size:.66rem;color:var(--gold-bright)}
-.book .meta{padding:1.05rem 1.3rem 1.3rem}
-.book .meta .yr{font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--gold-ink);margin-bottom:.4rem}
-.book .meta p{margin:0;font-size:.92rem;color:var(--ink-soft);line-height:1.5}
-.more-titles{margin-top:2.2rem;font-size:.97rem;color:var(--ink-soft)}
+/* books: matched-edition plates */
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));
+  gap:clamp(1.1rem,2.4vw,1.7rem)}
+.book{display:flex;flex-direction:column}
+.plate{position:relative;overflow:hidden;border-radius:6px;color:var(--cream);
+  min-height:250px;padding:1.55rem 1.5rem;display:flex;flex-direction:column;
+  box-shadow:0 12px 30px -18px rgba(53,9,18,.6);transition:transform .28s,box-shadow .28s}
+.book:hover .plate{transform:translateY(-5px);box-shadow:0 22px 44px -20px rgba(53,9,18,.7)}
+.plate::before{content:"";position:absolute;inset:9px;border:1px solid var(--keyline);
+  border-radius:3px;pointer-events:none;z-index:2}
+.plate.crimson{background-image:var(--grain),linear-gradient(158deg,#7d1a2a,var(--crimson-deep));
+  background-size:120px 120px,auto;background-blend-mode:soft-light,normal}
+.plate.ink{background-image:var(--grain),linear-gradient(158deg,var(--plate-ink-a),var(--plate-ink-b));
+  background-size:120px 120px,auto;background-blend-mode:soft-light,normal}
+.plate-kicker{position:relative;z-index:3;font-family:"Inter";font-weight:600;font-size:.64rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright)}
+.plate-title{position:relative;z-index:3;font-family:"Fraunces";font-weight:500;font-size:1.42rem;
+  line-height:1.12;color:#fff;margin-top:auto;font-variant-numeric:oldstyle-nums}
+.plate-sub{position:relative;z-index:3;font-size:.76rem;letter-spacing:.02em;color:var(--cream);
+  opacity:.82;margin-top:.55rem;font-feature-settings:"onum" 1}
+.plate-seal{position:absolute;right:-16px;bottom:-18px;width:104px;height:104px;
+  color:var(--cream);opacity:.09;z-index:1}
+.book .meta{padding:1.05rem .2rem 0;position:relative;margin-top:1rem;border-top:1px solid var(--line)}
+.book .meta p{margin:.85rem 0 0;font-size:.92rem;color:var(--ink-soft);line-height:1.52}
+.more-titles{margin-top:2.4rem;font-size:.97rem;color:var(--ink-soft);max-width:70ch}
 .more-titles b{color:var(--ink)}
 
-/* prose (about) */
+/* prose */
 .prose{max-width:68ch}
 .prose h2{font-size:clamp(1.7rem,3vw,2.3rem);color:var(--crimson);margin:2.6rem 0 1rem}
 .prose h2:first-child{margin-top:0}
 .prose p{font-size:1.07rem;color:var(--ink);line-height:1.72}
 .prose p.muted{color:var(--ink-soft)}
-.pullbar{margin:2.4rem 0;padding:1.4rem 0 1.4rem 1.6rem;border-left:3px solid var(--gold);
+.prose p.lead-cap::first-letter{font-family:"Fraunces";font-weight:500;font-size:3.5em;
+  line-height:.78;float:left;padding:.06em .12em 0 0;color:var(--crimson)}
+.pullbar{margin:2.6rem 0;padding:.2rem 0 .2rem 1.7rem;position:relative;border-left:2px solid var(--gold);
   font-family:"Fraunces";font-style:italic;font-weight:400;font-size:clamp(1.3rem,2.4vw,1.7rem);
   line-height:1.34;color:var(--crimson)}
+.pullbar::before{content:"";position:absolute;left:-6px;top:0;width:9px;height:9px;
+  background:var(--gold);transform:rotate(45deg)}
 .honors{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1.6rem}
 .honor{border:1px solid var(--line);border-radius:10px;padding:1.05rem 1.2rem;background:var(--paper-2)}
-.honor .y{font-family:"Fraunces";font-weight:500;font-size:1.35rem;color:var(--gold-ink);line-height:1}
+.honor .y{font-family:"Fraunces";font-weight:500;font-size:1.4rem;color:var(--gold-ink);line-height:1;
+  font-variant-numeric:oldstyle-nums}
 .honor .t{font-size:.92rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.4}
 
-/* booking band */
-.booking{background:radial-gradient(120% 160% at 15% 0%,#7d1a2a 0%,var(--crimson) 50%,var(--crimson-ink) 100%);
-  color:var(--cream)}
+/* booking */
+.booking{color:var(--cream);
+  background-image:var(--grain),radial-gradient(120% 160% at 15% 0%,#7d1a2a 0%,var(--crimson) 50%,var(--crimson-ink) 100%);
+  background-size:130px 130px,auto;background-blend-mode:soft-light,normal;
+  scroll-margin-top:80px}
 .booking .container{padding-block:var(--sp)}
 .booking h2{font-size:clamp(2rem,4.4vw,3.1rem);color:#fff;max-width:16ch}
 .booking .lede{color:var(--cream);opacity:.92;max-width:52ch;margin-top:1rem}
 .chan{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:2.4rem}
-.chan a,.chan div{display:block;text-decoration:none;color:var(--cream);
-  border:1px solid var(--line-dark);border-radius:11px;padding:1.15rem 1.25rem;
-  transition:border-color .2s,background .2s}
-.chan a:hover{border-color:var(--gold-bright);background:rgba(244,236,221,.05)}
-.chan .k{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+.chan a,.chan div{display:block;text-decoration:none;color:var(--cream);border:1px solid var(--line-dark);
+  border-radius:11px;padding:1.15rem 1.25rem;transition:border-color .2s,background .2s,transform .2s}
+.chan a:hover{border-color:var(--gold-bright);background:rgba(244,236,221,.05);transform:translateY(-2px)}
+.chan .k{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
   color:var(--gold-bright);margin-bottom:.45rem}
 .chan .v{font-family:"Fraunces";font-weight:500;font-size:1.12rem;color:#fff}
 
 /* footer */
-.site-foot{background:var(--crimson-ink);color:var(--cream)}
+.site-foot{color:var(--cream);background-color:var(--crimson-ink);
+  background-image:var(--grain);background-size:130px 130px;background-blend-mode:soft-light}
 .site-foot .container{padding-block:clamp(3rem,6vw,4.5rem)}
-.foot-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,5vw,4rem);
-  align-items:center;padding-bottom:2rem;border-bottom:1px solid var(--line-dark)}
-.foot-seal{width:96px;height:96px;color:var(--cream);flex:0 0 auto}
+.foot-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center;
+  padding-bottom:2rem;border-bottom:1px solid var(--line-dark)}
+.foot-seal{width:92px;height:92px;color:var(--cream);flex:0 0 auto}
 .foot-brand h2{font-size:1.7rem;color:#fff}
 .foot-brand p{margin:.5rem 0 0;color:var(--cream);opacity:.82;font-size:.97rem;max-width:46ch}
-.foot-bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
-  align-items:center;padding-top:1.6rem}
+.foot-bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center;
+  padding-top:1.6rem}
 .foot-nav{display:flex;gap:1.3rem;flex-wrap:wrap}
-.foot-nav a{text-decoration:none;color:var(--cream);opacity:.85;font-size:.92rem}
+.foot-nav a{text-decoration:none;color:var(--cream);opacity:.85;font-size:.92rem;transition:opacity .2s,color .2s}
 .foot-nav a:hover{opacity:1;color:var(--gold-bright)}
 .foot-fine{font-size:.8rem;color:var(--cream);opacity:.6;margin-top:1.4rem;max-width:62ch;line-height:1.6}
 .foot-fine a{color:var(--gold-bright);text-decoration:none}
 @media (max-width:620px){.foot-top{grid-template-columns:1fr;text-align:center;justify-items:center}}
 
-/* reveal (progressive, gated on .js) */
+/* reveal */
 html.js .reveal{opacity:0;transform:translateY(16px)}
-@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}}
-html.js .reveal.in{opacity:1;transform:none;
-  transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 </style>
 </head>
 <body>
@@ -286,68 +297,76 @@ html.js .reveal.in{opacity:1;transform:none;
   <div class="container">
     <div class="books">
       <article class="book reveal">
-        <div class="cover c1">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">Brotherhood</div>
-          <div class="cmeta">with Deepak Chopra</div>
+        <div class="plate crimson">
+          <span class="plate-kicker">Memoir</span>
+          <span class="plate-title">Brotherhood</span>
+          <span class="plate-sub">with Deepak Chopra &#183; 2013</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">2013</div><p>A double memoir of two brothers who emigrated from India and rose to the heights of Western and mind-body medicine.</p></div>
+        <div class="meta"><p>A double memoir of two brothers who emigrated from India and rose to the heights of Western and mind-body medicine.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c3">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">Leadership by Example</div>
-          <div class="cmeta">The Ten Key Principles</div>
+        <div class="plate ink">
+          <span class="plate-kicker">Leadership</span>
+          <span class="plate-title">Leadership by Example</span>
+          <span class="plate-sub">The Ten Key Principles</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">Leadership</div><p>Ten core principles of effective leadership, drawn from history and a career mentoring physicians.</p></div>
+        <div class="meta"><p>Ten core principles of effective leadership, drawn from history and a career mentoring physicians.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c2">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">The Two Most Important Days</div>
-          <div class="cmeta">with Gina Vild</div>
+        <div class="plate crimson">
+          <span class="plate-kicker">Purpose</span>
+          <span class="plate-title">The Two Most Important Days</span>
+          <span class="plate-sub">with Gina Vild &#183; 2017</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">2017</div><p>On finding your purpose and building a happier, healthier life around it.</p></div>
+        <div class="meta"><p>On finding your purpose and building a happier, healthier life around it.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c4">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">The Big Five</div>
-          <div class="cmeta">Live a longer, healthier life</div>
+        <div class="plate ink">
+          <span class="plate-kicker">Health</span>
+          <span class="plate-title">The Big Five</span>
+          <span class="plate-sub">Live a longer, healthier life</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">Health</div><p>Five simple, evidence-based things you can do that meaningfully improve health and longevity.</p></div>
+        <div class="meta"><p>Five simple, evidence-based things you can do that meaningfully improve health and longevity.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c1">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">Live Better, Live Longer</div>
-          <div class="cmeta">What&#39;s fact, what&#39;s fiction</div>
+        <div class="plate crimson">
+          <span class="plate-kicker">Health</span>
+          <span class="plate-title">Live Better, Live Longer</span>
+          <span class="plate-sub">What&#39;s fact, what&#39;s fiction</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">Health</div><p>What the latest research says about diet, screening, supplements, and the choices that add up.</p></div>
+        <div class="meta"><p>What the latest research says about diet, screening, supplements, and the choices that add up.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c4">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">Dr. Chopra Says</div>
-          <div class="cmeta">with Allan Lotvin, MD</div>
+        <div class="plate ink">
+          <span class="plate-kicker">Medicine</span>
+          <span class="plate-title">Dr. Chopra Says</span>
+          <span class="plate-sub">with Allan Lotvin, MD</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">Medicine</div><p>Medical facts and myths everyone should know, sorting durable truths from common misconceptions.</p></div>
+        <div class="meta"><p>Medical facts and myths everyone should know, sorting durable truths from common misconceptions.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c2">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">The Liver Book</div>
-          <div class="cmeta">A comprehensive guide</div>
+        <div class="plate crimson">
+          <span class="plate-kicker">Reference</span>
+          <span class="plate-title">The Liver Book</span>
+          <span class="plate-sub">A comprehensive guide</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">Reference</div><p>How the liver works, what goes wrong, and how to protect it, made clear for patients and readers.</p></div>
+        <div class="meta"><p>How the liver works, what goes wrong, and how to protect it, made clear for patients and readers.</p></div>
       </article>
       <article class="book reveal">
-        <div class="cover c3">
-          <span class="seal-min" aria-hidden="true">SC</span>
-          <div class="ct">Coffee: The Magical Elixir</div>
-          <div class="cmeta">The science of the cup</div>
+        <div class="plate ink">
+          <span class="plate-kicker">Health</span>
+          <span class="plate-title">Coffee: The Magical Elixir</span>
+          <span class="plate-sub">The science of the cup</span>
+          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
         </div>
-        <div class="meta"><div class="yr">Health</div><p>A look at the surprising research behind one of the world&#39;s most popular drinks.</p></div>
+        <div class="meta"><p>A look at the surprising research behind one of the world&#39;s most popular drinks.</p></div>
       </article>
     </div>
 
