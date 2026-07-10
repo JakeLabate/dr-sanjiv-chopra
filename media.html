@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Media & Scholarship | Dr. Sanjiv Chopra</title>
+<meta name="description" content="Dr. Sanjiv Chopra&#39;s TEDx talk, podcast and radio appearances, and the scholarly record in hepatology behind them, including his role as UpToDate hepatology Editor-in-Chief.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0}
+:root{
+  --paper:#FAF6EF; --paper-2:#F1EADD; --panel:#FFFFFF;
+  --ink:#211A18; --ink-soft:#5A4F49;
+  --crimson:#6E1423; --crimson-deep:#4C0D18; --crimson-ink:#350912;
+  --plate-ink-a:#2C2226; --plate-ink-b:#160F13;
+  --gold:#B5873A; --gold-ink:#8A6322; --gold-bright:#D8AE5A;
+  --cream:#F4ECDD; --cream-soft:#D8CDBA;
+  --line:#E4DACB; --line-dark:rgba(244,236,221,.16);
+  --keyline:rgba(216,174,90,.45);
+  --maxw:1140px; --pad:clamp(1.25rem,5vw,4rem);
+  --sp:clamp(4rem,9vw,7.25rem);
+  --r-s:4px; --r-m:8px;
+  --grain:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='120'%20height='120'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3CfeColorMatrix%20type='saturate'%20values='0'/%3E%3C/filter%3E%3Crect%20width='120'%20height='120'%20filter='url(%23n)'%20opacity='0.5'/%3E%3C/svg%3E");
+}
+html,body{background:var(--paper);color:var(--ink);
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--gold);color:var(--crimson-ink)}
+h1,h2,h3,h4{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-optical-sizing:auto;
+  font-weight:500;line-height:1.06;letter-spacing:-.015em;margin:0;
+  font-variant-numeric:oldstyle-nums;font-feature-settings:"onum" 1}
+h1,h2{text-wrap:balance}
+p{margin:0 0 1.1em}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{display:flex;align-items:center;gap:.62rem;font-family:"Inter";font-weight:600;
+  text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:var(--gold-ink);margin:0 0 1.1rem}
+.eyebrow::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex:0 0 auto}
+.eyebrow.on-dark{color:var(--gold-bright)}
+.eyebrow.on-dark::before{background:var(--gold-bright)}
+.lede{font-size:clamp(1.08rem,1.55vw,1.28rem);color:var(--ink-soft);line-height:1.62}
+.nb{white-space:nowrap}
+
+.skip{position:absolute;left:-999px;top:0;background:var(--crimson);color:var(--cream);
+  padding:.6rem 1rem;z-index:200;border-radius:0 0 var(--r-s) 0}
+.skip:focus{left:0}
+:focus-visible{outline:2.5px solid var(--gold-bright);outline-offset:3px;border-radius:3px}
+
+/* ---------- seal ---------- */
+.seal{display:block}
+.seal .ring{fill:none;stroke:var(--gold);stroke-width:1.4}
+.seal .ring-2{fill:none;stroke:var(--gold);stroke-width:.7}
+.seal .arc-text{fill:var(--gold);font-family:"Inter";font-weight:600;font-size:13px;
+  letter-spacing:3.2px;text-transform:uppercase}
+.seal .mono{fill:currentColor;font-family:"Fraunces";font-weight:500;font-size:74px;text-anchor:middle}
+.seal .md{fill:var(--gold);font-family:"Inter";font-weight:600;font-size:13px;
+  letter-spacing:5px;text-anchor:middle}
+.seal .star{fill:var(--gold)}
+
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:100;background:var(--crimson);border-bottom:1px solid var(--keyline)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.brand{display:flex;align-items:center;gap:.72rem;text-decoration:none;color:var(--cream)}
+.brand .seal{width:38px;height:38px;color:var(--cream);flex:0 0 auto}
+.brand-name{font-family:"Fraunces";font-weight:500;font-size:1.16rem;letter-spacing:-.01em;line-height:1}
+.brand-name small{display:block;font-family:"Inter";font-weight:600;font-size:.6rem;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin-top:.3rem}
+nav.primary{display:flex;align-items:center;gap:.15rem}
+nav.primary a{text-decoration:none;color:var(--cream);font-weight:500;font-size:.93rem;
+  padding:.5rem .72rem;border-radius:var(--r-s);position:relative;transition:color .2s}
+nav.primary a .u{position:absolute;left:.72rem;right:.72rem;bottom:.34rem;height:1.5px;
+  background:var(--gold-bright);transform:scaleX(0);transform-origin:left;transition:transform .26s ease}
+nav.primary a:hover{color:#fff}
+nav.primary a:hover .u,nav.primary a.active .u{transform:scaleX(1)}
+nav.primary a.active{color:#fff}
+.book-btn{margin-left:.5rem;text-decoration:none;background:var(--gold);color:var(--crimson-ink);
+  font-weight:600;font-size:.9rem;padding:.6rem 1.15rem;border-radius:var(--r-s);
+  transition:background .2s,transform .2s}
+.book-btn:hover{background:var(--gold-bright);transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-dark);color:var(--cream);
+  width:42px;height:40px;border-radius:var(--r-s);cursor:pointer;align-items:center;justify-content:center}
+.nav-toggle svg{width:20px;height:20px;stroke:var(--cream)}
+
+@media (max-width:900px){
+  nav.primary{position:absolute;top:70px;left:0;right:0;background:var(--crimson-deep);
+    flex-direction:column;align-items:stretch;gap:0;padding:.5rem var(--pad) 1.1rem;
+    border-bottom:1px solid var(--keyline);
+    clip-path:inset(0 0 100% 0);transition:clip-path .3s ease;pointer-events:none}
+  nav.primary.open{clip-path:inset(0 0 0 0);pointer-events:auto}
+  nav.primary a{padding:.85rem .3rem;border-bottom:1px solid var(--line-dark)}
+  nav.primary a .u{display:none}
+  .book-btn{margin:.9rem 0 0;text-align:center}
+  .nav-toggle{display:inline-flex}
+}
+
+/* ---------- hero / page-top ---------- */
+.hero{color:var(--cream);position:relative;overflow:hidden;border-bottom:1px solid var(--keyline);
+  background-image:var(--grain),radial-gradient(120% 120% at 78% 8%,#7d1a2a 0%,var(--crimson) 42%,var(--crimson-deep) 100%);
+  background-size:130px 130px,auto;background-blend-mode:soft-light,normal}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.18) 100%)}
+.hero .container{position:relative;z-index:2;padding-top:clamp(3.5rem,8vw,6rem);
+  padding-bottom:clamp(3.5rem,8vw,6rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.9rem,7.3vw,5.6rem);font-weight:500;color:#fff;margin:0 0 .22em}
+.hero .sub{font-family:"Fraunces";font-style:italic;font-weight:400;
+  font-size:clamp(1.3rem,2.7vw,2.05rem);line-height:1.22;color:var(--gold-bright);
+  max-width:30ch;text-wrap:balance;margin:0 0 1.4rem}
+.hero .lede{color:var(--cream);max-width:46ch;opacity:.92}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.9rem}
+.btn{text-decoration:none;font-weight:600;font-size:.97rem;padding:.85rem 1.5rem;border-radius:var(--r-s);
+  transition:transform .2s,background .2s,color .2s,border-color .2s;display:inline-block}
+.btn-gold{background:var(--gold);color:var(--crimson-ink)}
+.btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(244,236,221,.45);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--gold-bright);color:#fff;transform:translateY(-2px)}
+.hero-seal{width:min(230px,32vw);height:min(230px,32vw);color:var(--cream)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem;padding-top:1.6rem;
+  border-top:1px solid var(--line-dark)}
+.hero-stats div{font-size:.85rem;color:var(--cream);opacity:.9}
+.hero-stats b{display:block;font-family:"Fraunces";font-style:normal;font-weight:500;
+  font-variant-numeric:oldstyle-nums;font-size:1.55rem;color:var(--gold-bright);opacity:1;
+  line-height:1;margin-bottom:.25rem}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-seal{display:none}}
+
+.ptop{color:var(--cream);border-bottom:1px solid var(--keyline);
+  background-image:var(--grain),radial-gradient(120% 140% at 85% 0%,#7d1a2a 0%,var(--crimson) 48%,var(--crimson-deep) 100%);
+  background-size:130px 130px,auto;background-blend-mode:soft-light,normal}
+.ptop .container{padding-top:clamp(3rem,6vw,4.5rem);padding-bottom:clamp(3rem,6vw,4.5rem)}
+.ptop h1{font-size:clamp(2.5rem,5.5vw,3.9rem);color:#fff;max-width:20ch}
+.ptop .lede{color:var(--cream);opacity:.92;max-width:54ch;margin-top:1rem}
+
+/* ---------- sections ---------- */
+.section{padding-block:var(--sp)}
+.section.tight{padding-block:clamp(3rem,6vw,4.5rem)}
+.rule{height:0;border:0;border-top:1.5px solid var(--gold);width:54px;margin:0 0 1.4rem}
+.rule.dbl{position:relative;width:54px}
+.rule.dbl::after{content:"";position:absolute;left:0;top:4px;width:34px;border-top:1px solid var(--gold)}
+h2.big{font-size:clamp(2rem,4.2vw,3rem)}
+.section-alt{background:var(--paper-2);border-block:1px solid var(--line)}
+.head-2col{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;
+  flex-wrap:wrap;margin-bottom:2.6rem}
+.head-2col .lede{max-width:40ch}
+.morelink{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;text-decoration:none;
+  color:var(--crimson);font-weight:600;font-size:.96rem}
+.morelink .ar{transition:transform .2s}
+.morelink:hover{color:var(--gold-ink)}
+.morelink:hover .ar{transform:translateX(4px)}
+
+/* brief */
+.brief{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(2rem,5vw,4.5rem)}
+.brief .body p{font-size:1.06rem;color:var(--ink)}
+.brief .body p+p{color:var(--ink-soft)}
+.cred{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-m);padding:1.6rem 1.7rem}
+.cred h3{font-size:.74rem;font-family:"Inter";font-weight:600;text-transform:uppercase;
+  letter-spacing:.18em;color:var(--gold-ink);margin-bottom:1rem}
+.cred ul{list-style:none;margin:0;padding:0}
+.cred li{padding:.62rem 0;border-top:1px solid var(--line);font-size:.95rem;line-height:1.45}
+.cred li:first-child{border-top:0;padding-top:0}
+.cred li b{font-weight:600}
+@media (max-width:760px){.brief{grid-template-columns:1fr}}
+
+/* talks */
+.talks{display:grid;gap:0}
+.talk{display:grid;grid-template-columns:110px 1fr;gap:clamp(1rem,3vw,2.4rem);padding:2rem 0;
+  border-top:1px solid var(--line);align-items:start}
+.talk:first-child{border-top:0}
+.talk .kw{font-family:"Fraunces";font-weight:500;font-size:.98rem;color:var(--gold-ink);
+  text-transform:uppercase;letter-spacing:.12em;padding-top:.35rem}
+.talk .kw .ix{display:block;font-family:"Inter";font-weight:600;font-size:.68rem;
+  letter-spacing:.18em;color:var(--gold);margin-bottom:.35rem;font-variant-numeric:oldstyle-nums}
+.talk h3{font-size:clamp(1.35rem,2.4vw,1.85rem);margin-bottom:.55rem;color:var(--crimson)}
+.talk p{margin:0 0 .6em;color:var(--ink-soft);max-width:62ch}
+.talk p:last-child{margin-bottom:0}
+.audience{margin-top:2.4rem;padding:1.3rem 1.5rem;background:var(--panel);border:1px solid var(--line);
+  border-left:3px solid var(--gold);border-radius:0 var(--r-m) var(--r-m) 0;font-size:.97rem;color:var(--ink-soft)}
+.audience b{color:var(--ink)}
+.countries{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem}
+.countries span{font-size:.76rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);border:1px solid var(--line);padding:.35rem .7rem;border-radius:3px;background:var(--panel)}
+
+/* books */
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:clamp(1.1rem,2.4vw,1.7rem)}
+.book{display:flex;flex-direction:column}
+.plate{position:relative;overflow:hidden;border-radius:var(--r-s);color:var(--cream);min-height:250px;
+  padding:1.55rem 1.5rem;display:flex;flex-direction:column;
+  box-shadow:0 12px 30px -18px rgba(53,9,18,.6);transition:transform .28s,box-shadow .28s}
+.book:hover .plate,a.spot-link:hover .plate{transform:translateY(-5px);box-shadow:0 22px 44px -20px rgba(53,9,18,.7)}
+.plate::before{content:"";position:absolute;inset:9px;border:1px solid var(--keyline);
+  border-radius:2px;pointer-events:none;z-index:2}
+.plate.crimson{background-image:var(--grain),linear-gradient(158deg,#7d1a2a,var(--crimson-deep));
+  background-size:120px 120px,auto;background-blend-mode:soft-light,normal}
+.plate.ink{background-image:var(--grain),linear-gradient(158deg,var(--plate-ink-a),var(--plate-ink-b));
+  background-size:120px 120px,auto;background-blend-mode:soft-light,normal}
+.plate-kicker{position:relative;z-index:3;font-family:"Inter";font-weight:600;font-size:.64rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright)}
+.plate-title{position:relative;z-index:3;font-family:"Fraunces";font-weight:500;font-size:1.42rem;
+  line-height:1.12;color:#fff;margin-top:auto;font-variant-numeric:oldstyle-nums}
+.plate-sub{position:relative;z-index:3;font-size:.76rem;letter-spacing:.02em;color:var(--cream);
+  opacity:.82;margin-top:.55rem;font-feature-settings:"onum" 1}
+.plate-seal{position:absolute;right:-16px;bottom:-18px;width:104px;height:104px;
+  color:var(--cream);opacity:.09;z-index:1}
+.book .meta{padding:1.05rem .2rem 0;margin-top:1rem;border-top:1px solid var(--line)}
+.book .meta p{margin:.85rem 0 0;font-size:.92rem;color:var(--ink-soft);line-height:1.52}
+.more-titles{margin-top:2.4rem;font-size:.97rem;color:var(--ink-soft);max-width:70ch}
+.more-titles b{color:var(--ink)}
+
+/* book spotlight */
+.spot{display:grid;grid-template-columns:minmax(230px,300px) 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.spot .plate{min-height:340px}
+.spot .plate .plate-title{font-size:2rem}
+.spot h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:1rem}
+.spot p{color:var(--ink-soft);font-size:1.05rem;max-width:56ch}
+a.spot-link{text-decoration:none;display:block}
+@media (max-width:700px){.spot{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{list-style:none;margin:2.2rem 0 0;padding:0;border-left:1px solid var(--line)}
+.tl li{position:relative;padding:0 0 1.8rem 2rem}
+.tl li:last-child{padding-bottom:.2rem}
+.tl li::before{content:"";position:absolute;left:-5px;top:.42em;width:9px;height:9px;
+  background:var(--gold);transform:rotate(45deg)}
+.tl .y{font-family:"Fraunces";font-weight:500;font-size:1.3rem;color:var(--crimson);
+  font-variant-numeric:oldstyle-nums;line-height:1}
+.tl .t{font-size:.97rem;color:var(--ink-soft);margin-top:.35rem;max-width:58ch;line-height:1.55}
+
+/* big five */
+.five{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem;margin-top:2.6rem}
+@media (min-width:1000px){.five{grid-template-columns:repeat(5,1fr)}}
+.fcard{border:1px solid var(--line);background:var(--panel);border-radius:var(--r-m);
+  padding:1.6rem 1.5rem 1.7rem;transition:transform .25s,box-shadow .25s}
+.fcard:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(53,9,18,.5)}
+.fcard .n{font-family:"Fraunces";font-weight:500;font-size:3.3rem;line-height:.85;color:var(--gold);
+  font-variant-numeric:oldstyle-nums}
+.fcard h3{font-size:1.28rem;color:var(--crimson);margin:.85rem 0 .5rem}
+.fcard p{margin:0;font-size:.93rem;color:var(--ink-soft);line-height:1.55}
+.five-strip{display:flex;flex-wrap:wrap;gap:1rem 2.4rem;margin-top:2.2rem}
+.five-strip .it{display:flex;align-items:baseline;gap:.7rem}
+.five-strip .n{font-family:"Fraunces";font-weight:500;font-size:2.1rem;color:var(--gold);
+  font-variant-numeric:oldstyle-nums;line-height:1}
+.five-strip .l{font-family:"Fraunces";font-weight:500;font-size:1.22rem;color:var(--crimson)}
+.note{margin-top:2.4rem;padding:1.2rem 1.4rem;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--r-m);font-size:.88rem;color:var(--ink-soft);max-width:74ch}
+
+/* media */
+.feature{position:relative;overflow:hidden;border-radius:var(--r-m);color:var(--cream);
+  padding:clamp(1.8rem,4vw,3rem);
+  background-image:var(--grain),linear-gradient(150deg,var(--plate-ink-a),var(--plate-ink-b));
+  background-size:120px 120px,auto;background-blend-mode:soft-light,normal}
+.feature::before{content:"";position:absolute;inset:10px;border:1px solid var(--keyline);
+  border-radius:4px;pointer-events:none}
+.feature .fk{position:relative;font-family:"Inter";font-weight:600;font-size:.68rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright)}
+.feature h2{position:relative;font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff;margin:.8rem 0 .8rem;max-width:22ch}
+.feature p{position:relative;color:var(--cream);opacity:.88;max-width:56ch;margin-bottom:1.4rem}
+.feature .btn{position:relative}
+.media-rows{margin-top:.4rem}
+.media-row{display:grid;grid-template-columns:130px 1fr;gap:clamp(1rem,3vw,2.4rem);
+  padding:1.7rem 0;border-top:1px solid var(--line);align-items:start}
+.media-row:first-child{border-top:0}
+.media-row .mo{font-family:"Inter";font-weight:600;font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-ink);padding-top:.45rem}
+.media-row h3{font-size:clamp(1.2rem,2.1vw,1.55rem);color:var(--crimson);margin-bottom:.4rem}
+.media-row p{margin:0;color:var(--ink-soft);font-size:.97rem;max-width:62ch}
+.media-row a.morelink{margin-top:.7rem}
+
+/* prose */
+.prose{max-width:68ch}
+.prose h2{font-size:clamp(1.7rem,3vw,2.3rem);color:var(--crimson);margin:2.6rem 0 1rem}
+.prose h2:first-child{margin-top:0}
+.prose p{font-size:1.07rem;color:var(--ink);line-height:1.72}
+.prose p.muted{color:var(--ink-soft)}
+.prose p.lead-cap::first-letter{font-family:"Fraunces";font-weight:500;font-size:3.5em;
+  line-height:.78;float:left;padding:.06em .12em 0 0;color:var(--crimson)}
+.pullbar{margin:2.6rem 0;padding:.2rem 0 .2rem 1.7rem;position:relative;border-left:2px solid var(--gold);
+  font-family:"Fraunces";font-style:italic;font-weight:400;font-size:clamp(1.3rem,2.4vw,1.7rem);
+  line-height:1.34;color:var(--crimson)}
+.pullbar::before{content:"";position:absolute;left:-6px;top:0;width:9px;height:9px;
+  background:var(--gold);transform:rotate(45deg)}
+
+/* booking */
+.booking{color:var(--cream);scroll-margin-top:80px;border-top:1px solid var(--keyline);
+  background-image:var(--grain),radial-gradient(120% 160% at 15% 0%,#7d1a2a 0%,var(--crimson) 50%,var(--crimson-ink) 100%);
+  background-size:130px 130px,auto;background-blend-mode:soft-light,normal}
+.booking .container{padding-block:var(--sp)}
+.booking h2{font-size:clamp(2rem,4.4vw,3.1rem);color:#fff;max-width:16ch}
+.booking .lede{color:var(--cream);opacity:.92;max-width:52ch;margin-top:1rem}
+.chan{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:2.4rem}
+.chan a{display:block;text-decoration:none;color:var(--cream);border:1px solid var(--line-dark);
+  border-radius:var(--r-m);padding:1.15rem 1.25rem;transition:border-color .2s,background .2s,transform .2s}
+.chan a:hover{border-color:var(--gold-bright);background:rgba(244,236,221,.05);transform:translateY(-2px)}
+.chan .k{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-bright);margin-bottom:.45rem}
+.chan .v{font-family:"Fraunces";font-weight:500;font-size:1.12rem;color:#fff}
+
+/* footer */
+.site-foot{color:var(--cream);background-color:var(--crimson-ink);
+  background-image:var(--grain);background-size:130px 130px;background-blend-mode:soft-light}
+.site-foot .container{padding-block:clamp(3rem,6vw,4.5rem)}
+.foot-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center;
+  padding-bottom:2rem;border-bottom:1px solid var(--line-dark)}
+.foot-seal{width:92px;height:92px;color:var(--cream);flex:0 0 auto}
+.foot-brand h2{font-size:1.7rem;color:#fff}
+.foot-brand p{margin:.5rem 0 0;color:var(--cream);opacity:.82;font-size:.97rem;max-width:46ch}
+.foot-bottom{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center;
+  padding-top:1.6rem}
+.foot-nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+.foot-nav a{text-decoration:none;color:var(--cream);opacity:.85;font-size:.92rem;transition:opacity .2s,color .2s}
+.foot-nav a:hover{opacity:1;color:var(--gold-bright)}
+.foot-fine{font-size:.8rem;color:var(--cream);opacity:.6;margin-top:1.4rem;max-width:62ch;line-height:1.6}
+.foot-fine a{color:var(--gold-bright);text-decoration:none}
+@media (max-width:620px){.foot-top{grid-template-columns:1fr;text-align:center;justify-items:center}}
+
+/* reveal */
+html.js .reveal{opacity:0;transform:translateY(16px)}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="container head-row">
+    <a class="brand" href="index.html" aria-label="Dr. Sanjiv Chopra, home">
+      <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="Sanjiv Chopra monogram"><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="mono" x="100" y="128">SC</text></svg>
+      <span class="brand-name">Sanjiv Chopra<small>Harvard Medical School</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav class="primary" id="nav" aria-label="Primary">
+      <a href="about.html" class="">About<span class="u"></span></a><a href="speaking.html" class="">Speaking<span class="u"></span></a><a href="books.html" class="">Books<span class="u"></span></a><a href="big-five.html" class="">Big Five<span class="u"></span></a><a href="media.html" class="active">Media<span class="u"></span></a>
+      <a class="book-btn" href="index.html#booking">Booking</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="ptop">
+  <div class="container">
+    <p class="eyebrow on-dark reveal">Media &amp; scholarship</p>
+    <h1 class="reveal">On stages, on air, and in the journals.</h1>
+    <p class="lede reveal">A selection of Dr. Chopra&#39;s public appearances and a note on the scholarly record behind them.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow reveal">Featured talk</p>
+    <div class="feature reveal">
+      <span class="fk">TEDx &#183; Boston University &#183; 2019</span>
+      <h2>Dharma: Happiness and Living with Purpose</h2>
+      <p>An exploration of the tenets of lasting happiness: the critical importance of friends, the ability to forgive, being of service to others, and expressing gratitude. Happiness, Dr. Chopra argues, is more than the sum of happy moments.</p>
+      <a class="btn btn-gold" href="https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose" rel="noopener" target="_blank">Watch on TED.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="head-2col">
+      <div>
+        <p class="eyebrow reveal">Conversations</p>
+        <h2 class="big reveal" style="font-size:clamp(1.8rem,3.4vw,2.5rem)">Selected appearances</h2>
+      </div>
+    </div>
+    <div class="media-rows">
+      <div class="media-row reveal">
+        <div class="mo">NPR &#183; 2013</div>
+        <div><h3>Two brothers, two paths into medicine</h3>
+        <p>A joint conversation with his brother Deepak on the publication of <em>Brotherhood</em>: their father&#39;s cardiology practice, their emigration from India, and the very different careers that followed.</p></div>
+      </div>
+      <div class="media-row reveal">
+        <div class="mo">Podcast &#183; 2016</div>
+        <div><h3>The Ultimate Health Podcast, Ep. 134</h3>
+        <p>A long-form conversation on <em>The Big Five</em>: the evidence on coffee, how to think about vitamin D, why walking counts as exercise, the case for a daily handful of nuts, and his own meditation routine.</p></div>
+      </div>
+      <div class="media-row reveal">
+        <div class="mo">Podcast</div>
+        <div><h3>Ben Greenfield Life</h3>
+        <p>A deep dive into the longevity research behind <em>The Big Five</em>, from caffeine metabolism to the health effects of four to six cups of coffee a day.</p>
+        <a class="morelink" href="https://bengreenfieldlife.com/podcast/anti-aging-podcasts/live-a-longer-healthier-life-podcast-with-dr-sanjiv-chopra/" rel="noopener" target="_blank">Listen to the episode <span class="ar">&rarr;</span></a></div>
+      </div>
+      <div class="media-row reveal">
+        <div class="mo">Interview &#183; 2016</div>
+        <div><h3>The James Altucher Show</h3>
+        <p>A wide-ranging interview on health and longevity, including the antioxidant case for coffee and practical notes on vitamin D.</p>
+        <a class="morelink" href="https://archive.jamesaltucher.com/blog/big-five-longer-life-better-health/" rel="noopener" target="_blank">Read the notes <span class="ar">&rarr;</span></a></div>
+      </div>
+      <div class="media-row reveal">
+        <div class="mo">Video</div>
+        <div><h3>Lectures on YouTube</h3>
+        <p>Recorded talks on leadership, happiness, and healthy living are collected on his YouTube channel.</p>
+        <a class="morelink" href="https://www.youtube.com/user/chopraleadership" rel="noopener" target="_blank">Visit the channel <span class="ar">&rarr;</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <hr class="rule dbl reveal" aria-hidden="true">
+    <p class="eyebrow reveal">The scholarly record</p>
+    <div class="brief">
+      <div class="body reveal">
+        <h2 class="big" style="font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:1.2rem">Behind the stagecraft, the science.</h2>
+        <p>Dr. Chopra&#39;s public voice rests on a substantial academic record: well over a hundred peer-reviewed publications in journals including the New England Journal of Medicine and Gastroenterology, with particular depth in viral hepatitis, cirrhosis, liver biopsy technique, and non-alcoholic fatty liver disease.</p>
+        <p>As Editor-in-Chief of the hepatology section of UpToDate, his editorial judgment reaches the millions of clinicians who consult the resource worldwide, and as Faculty Dean for CME at Harvard he led programs reaching some 80,000 clinicians across more than 150 countries each year.</p>
+      </div>
+      <aside class="cred reveal" aria-label="Scholarly roles">
+        <h3>Roles &amp; reach</h3>
+        <ul>
+          <li><b>Editor-in-Chief, Hepatology</b>, UpToDate</li>
+          <li><b>Senior Consultant in Hepatology</b>, Beth Israel Deaconess Medical Center</li>
+          <li><b>100+ peer-reviewed publications</b>, incl. NEJM and Gastroenterology</li>
+          <li><b>80,000 clinicians</b> reached yearly as Faculty Dean for Harvard CME</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="container">
+    <hr class="rule reveal" aria-hidden="true" style="border-color:var(--gold-bright)">
+    <p class="eyebrow on-dark reveal">Booking &amp; inquiries</p>
+    <h2 class="reveal">Bring Dr. Chopra to your stage.</h2>
+    <p class="lede reveal">Dr. Chopra speaks to corporations, hospitals, universities, and conferences worldwide on leadership, well-being, and the practice of a purposeful life. Inquiries are welcome.</p>
+    <div class="chan">
+      <a class="reveal" href="https://www.creativewell.com/lecture-division/speaker?id=dr-sanjiv-chopra" rel="noopener" target="_blank">
+        <div class="k">Keynote booking</div><div class="v">CreativeWell &rarr;</div></a>
+      <a class="reveal" href="https://sanjivchopra.com" rel="noopener" target="_blank">
+        <div class="k">Official site</div><div class="v">sanjivchopra.com</div></a>
+      <a class="reveal" href="https://www.facebook.com/DrSanjivChopra" rel="noopener" target="_blank">
+        <div class="k">Follow</div><div class="v">Facebook</div></a>
+      <a class="reveal" href="https://twitter.com/sanjiv_chopra" rel="noopener" target="_blank">
+        <div class="k">Follow</div><div class="v">X / Twitter</div></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot">
+  <div class="container">
+    <div class="foot-top">
+      <svg class="seal foot-seal" viewBox="0 0 200 200" role="img" aria-label="Dr. Sanjiv Chopra, MD seal"><defs><path id="arcFoot" fill="none" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="arc-text"><textPath href="#arcFoot" startOffset="0">DR. SANJIV CHOPRA &#183; HARVARD MEDICAL SCHOOL &#183; </textPath></text><text class="mono" x="100" y="118">SC</text><text class="md" x="100" y="150">M D</text><path class="star" d="M100 30 l2.1 5.4 5.8.4 -4.5 3.7 1.5 5.6 -4.9-3.2 -4.9 3.2 1.5-5.6 -4.5-3.7 5.8-.4z"/></svg>
+      <div class="foot-brand">
+        <h2>Sanjiv Chopra, MD</h2>
+        <p>Professor of Medicine at Harvard Medical School. Author and keynote speaker on leadership, healthy living, and living with purpose.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="books.html">Books</a>
+        <a href="big-five.html">The Big Five</a>
+        <a href="media.html">Media</a>
+        <a href="index.html#booking">Booking</a>
+      </nav>
+      <nav class="foot-nav" aria-label="Social">
+        <a href="https://www.facebook.com/DrSanjivChopra" rel="noopener" target="_blank">Facebook</a>
+        <a href="https://twitter.com/sanjiv_chopra" rel="noopener" target="_blank">X</a>
+        <a href="https://www.youtube.com/user/chopraleadership" rel="noopener" target="_blank">YouTube</a>
+      </nav>
+    </div>
+    <p class="foot-fine">This site presents publicly available information about Dr. Sanjiv Chopra for speaking and editorial inquiries. For official updates, visit <a href="https://sanjivchopra.com" rel="noopener" target="_blank">sanjivchopra.com</a>. &copy; 2026.</p>
+  </div>
+</footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var t=document.querySelector('.nav-toggle'),n=document.getElementById('nav');
+  if(t&&n){t.addEventListener('click',function(){
+    var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);
+    t.setAttribute('aria-label',o?'Close menu':'Open menu');});}
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver'in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},
+      {rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el,i){el.style.transitionDelay=(Math.min(i%4,3)*70)+'ms';io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
