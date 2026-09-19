@@ -1,0 +1,29 @@
+source_path,target_path,code,note
+/about/,/about,301,
+/biography/,/about,301,bio merged into about
+/talks/,/speaking/,301,
+/talks/leadership-by-example/,/speaking/leadership-by-example,301,
+/talks/happiness-and-living-with-purpose-keys-to-a-joy-filled-life/,/speaking/happiness-living-with-purpose,301,
+/talks/live-better-live-longer-whats-fact-whats-fiction/,/speaking/live-better-live-longer,301,
+/talks/the-top-stories-in-medicine-in-the-last-century-predictions-about-the-next-50-years/,/speaking/top-stories-in-medicine,301,
+/talks/an-invitation-to-good-health-and-lasting-happiness/,/speaking/invitation-good-health-lasting-happiness,301,
+/talks/microbiome-man-and-medicine-a-revolution-in-modern-medicine/,/speaking/microbiome-man-medicine,301,
+/books/,/books/,301,path unchanged
+/books/brotherhood/,/books/brotherhood,301,
+/books/the-two-most-important-days/,/books/two-most-important-days,301,
+/books/the-big-five/,/books/big-five,301,
+/books/live-better-live-longer/,/books/live-better-live-longer,301,
+/books/doctor-chopra-says/,/books/doctor-chopra-says,301,
+/books/leadership-by-example/,/books/leadership-by-example,301,
+/press/,/media,301,
+/contact/,/contact,301,
+/blog/,/,301,blog retired pending migration decision
+/the-two-most-important-days-reflections-on-happiness-and-living-with-purpose/,/speaking/happiness-living-with-purpose,301,blog post
+/heros-story-story-papa-jaime/,/books/leadership-by-example,301,blog post
+/ten-key-attributes-of-leaders/,/speaking/leadership-by-example,301,blog post
+/sanjiv-and-deepak-chopra-newswire-interview/,/media,301,
+"/?p=199",/speaking/top-stories-in-medicine,301,query-string rule
+"/?p=203",/speaking/live-better-live-longer,301,query-string rule
+"/?p=216",/about,301,query-string rule
+"/?p=470",/books/two-most-important-days,301,query-string rule
+/*,/,301,catch-all last
