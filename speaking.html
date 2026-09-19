@@ -343,6 +343,22 @@ a.spot-link{text-decoration:none;display:block}
 .shelf-btn.next{right:-14px}
 @media (max-width:900px){.shelf-btn{display:none}}
 
+/* talks + audiences */
+.talk h3 a{color:inherit;text-decoration:none;transition:color .2s}
+.talk h3 a:hover{color:var(--gold-ink)}
+.audgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:2.2rem}
+a.audcard{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--r-m);padding:1.35rem 1.4rem;transition:transform .22s,box-shadow .22s,border-color .22s}
+a.audcard:hover{transform:translateY(-3px);box-shadow:0 16px 32px -22px rgba(53,9,18,.5);border-color:var(--gold)}
+.audcard .t{font-family:"Fraunces";font-weight:500;font-size:1.18rem;color:var(--crimson)}
+.audcard .d{font-size:.88rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.5}
+.audcard .ar{display:inline-block;margin-top:.7rem;color:var(--gold-ink);font-weight:600;font-size:.85rem}
+.fits{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.6rem 0 0}
+.fits a{text-decoration:none;font-size:.82rem;font-weight:600;color:var(--crimson);
+  border:1px solid var(--line);background:var(--panel);padding:.45rem .85rem;border-radius:3px;
+  transition:border-color .2s,color .2s}
+.fits a:hover{border-color:var(--gold);color:var(--gold-ink)}
+
 /* book detail */
 a.bookc{text-decoration:none;color:inherit;display:block}
 .cover-box.lg{height:430px;width:287px}
@@ -421,28 +437,69 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
   <div class="container">
     <p class="eyebrow on-dark reveal">Speaking</p>
     <h1 class="reveal">Keynotes grounded in evidence, told through story.</h1>
-    <p class="lede reveal">Four signature talks Dr. Chopra has delivered to audiences in more than twenty-five countries, from corporate leadership teams to medical societies and universities.</p>
+    <p class="lede reveal">Seven signature talks, delivered to audiences in more than twenty-five countries. Each links to a full description.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
+    <p class="eyebrow reveal">The talks</p>
     <div class="talks">
       <article class="talk reveal"><div class="kw"><span class="ix">01</span>Leadership</div>
-        <div><h3>Leadership by Example: The Ten Key Principles of All Great Leaders</h3><p>Great leaders, Dr. Chopra argues, are not made by the offices they occupy. They are defined by character: by integrity, courage, generosity, and the ability to bring out the best in others.</p><p>Built from history, literature, and a career spent mentoring physicians, this keynote lays out ten principles anyone can cultivate, each illustrated with a memorable story drawn from lives like those of Gandhi, Florence Nightingale, and Churchill. It is based on his book of the same name.</p></div></article>
+        <div><h3><a href="talk-leadership-by-example.html">Leadership by Example: The Ten Key Principles of All Great Leaders</a></h3>
+        <p>The ten principles of genuinely great leaders, told through history and a life in medicine. His most requested keynote, delivered more than sixty times across the United States and in more than a dozen countries.</p>
+        <a class="morelink" href="talk-leadership-by-example.html">Full description <span class="ar">&rarr;</span></a></div></article>
       <article class="talk reveal"><div class="kw"><span class="ix">02</span>Purpose</div>
-        <div><h3>Happiness and Living with Purpose: Keys to a Joy-Filled Life</h3><p>Why are some people deeply content while others, with every apparent advantage, are not? Dr. Chopra distinguishes happiness from fleeting pleasure and material success, and points to habits that research and experience both support: gratitude, friendship, forgiveness, and service.</p><p>At its center is an idea he returns to often, that the two most important days of your life are the day you are born and the day you discover why.</p></div></article>
+        <div><h3><a href="talk-happiness-living-with-purpose.html">Happiness and Living with Purpose: Keys to a Joy-Filled Life</a></h3>
+        <p>The difference between happiness, joy, and bliss, and the practices research supports: gratitude, friendship, forgiveness, and service.</p>
+        <a class="morelink" href="talk-happiness-living-with-purpose.html">Full description <span class="ar">&rarr;</span></a></div></article>
       <article class="talk reveal"><div class="kw"><span class="ix">03</span>Health</div>
-        <div><h3>Live Better, Live Longer: What&#39;s Fact, What&#39;s Fiction</h3><p>Every week brings a new headline about the thing that will save, or end, your life. As a physician and educator, Dr. Chopra cuts through the noise.</p><p>This talk surveys the real evidence on diet, cancer screening, supplements, and everyday choices, telling audiences plainly what the research supports and what it does not.</p></div></article>
+        <div><h3><a href="talk-live-better-live-longer.html">Live Better, Live Longer: What&#39;s Fact, What&#39;s Fiction</a></h3>
+        <p>A physician&#39;s clear-eyed tour of the evidence on diet, screening, supplements, and daily habits: what holds up and what does not.</p>
+        <a class="morelink" href="talk-live-better-live-longer.html">Full description <span class="ar">&rarr;</span></a></div></article>
       <article class="talk reveal"><div class="kw"><span class="ix">04</span>Medicine</div>
-        <div><h3>The Top Stories in Medicine in the Last Century, and Predictions for the Next Fifty Years</h3><p>From antibiotics and vaccines to imaging and genomics, Dr. Chopra walks through the breakthroughs that transformed human health within living memory.</p><p>Then he turns forward, offering a grounded, optimistic, and clear-eyed look at where medicine is heading, and what it will mean for how we live.</p></div></article>
+        <div><h3><a href="talk-top-stories-in-medicine.html">The Top Stories in Medicine in the Last Century, and Predictions About the Next 50 Years</a></h3>
+        <p>The breakthroughs that reshaped human health within living memory, and bold, grounded predictions for the half century ahead.</p>
+        <a class="morelink" href="talk-top-stories-in-medicine.html">Full description <span class="ar">&rarr;</span></a></div></article>
+      <article class="talk reveal"><div class="kw"><span class="ix">05</span>Medicine</div>
+        <div><h3><a href="talk-rearview-mirror-glimpse-ahead.html">A Look Back Through the Rearview Mirror and A Glimpse Ahead</a></h3>
+        <p>Seventy-five years of landmark discoveries, and the six stories, from artificial intelligence to the microbiome, that will define the next five.</p>
+        <a class="morelink" href="talk-rearview-mirror-glimpse-ahead.html">Full description <span class="ar">&rarr;</span></a></div></article>
+      <article class="talk reveal"><div class="kw"><span class="ix">06</span>Well-being</div>
+        <div><h3><a href="talk-invitation-good-health-lasting-happiness.html">An Invitation to Good Health and Lasting Happiness</a></h3>
+        <p>A single invitation with two parts: the habits of good health and the principles of lasting happiness.</p>
+        <a class="morelink" href="talk-invitation-good-health-lasting-happiness.html">Full description <span class="ar">&rarr;</span></a></div></article>
+      <article class="talk reveal"><div class="kw"><span class="ix">07</span>Science</div>
+        <div><h3><a href="talk-microbiome-man-medicine.html">Microbiome, Man and Medicine: A Revolution in Modern Medicine</a></h3>
+        <p>A revolution hiding in plain sight: what the gut microbiome is teaching modern medicine.</p>
+        <a class="morelink" href="talk-microbiome-man-medicine.html">Full description <span class="ar">&rarr;</span></a></div></article>
     </div>
+  </div>
+</section>
 
-    <div class="audience reveal">
-      <b>Audiences and formats.</b> Corporate leadership teams, healthcare systems and medical societies, academic societies, universities, professional associations, CEO clubs, and wealth management firms. Talks can be tailored in length and emphasis for keynotes, conference plenaries, commencement addresses, workshops, and grand rounds.
+<section class="section section-alt">
+  <div class="container">
+    <p class="eyebrow reveal">Who he speaks to</p>
+    <h2 class="big reveal" style="font-size:clamp(1.8rem,3.4vw,2.5rem)">Every room gets its own talk.</h2>
+    <div class="audgrid">
+      <a class="audcard reveal" href="audience-corporations.html"><div class="t">Corporations</div><div class="d">Leadership teams, offsites, and company-wide keynotes.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-healthcare-systems.html"><div class="t">Hospitals &amp; health systems</div><div class="d">Grand rounds, clinician well-being, and physician leadership.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-medical-societies.html"><div class="t">Medical societies</div><div class="d">Plenaries, named lectures, and CME keynotes.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-academic-societies.html"><div class="t">Academic societies</div><div class="d">Annual meetings and scholarly gatherings across disciplines.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-universities.html"><div class="t">Universities</div><div class="d">Commencements, student audiences, and campus lectures.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-ceo-clubs.html"><div class="t">CEO clubs</div><div class="d">Intimate executive forums built around conversation.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-wealth-managers.html"><div class="t">Wealth managers</div><div class="d">Client events on the assets money cannot buy back.</div><span class="ar">Read more &rarr;</span></a>
+      <a class="audcard reveal" href="audience-professional-associations.html"><div class="t">Professional associations</div><div class="d">Conference keynotes that travel well across industries.</div><span class="ar">Read more &rarr;</span></a>
     </div>
+    <div class="audience reveal" style="margin-top:2rem">
+      <b>Formats.</b> Talks can be tailored in length and emphasis for keynotes, conference plenaries, commencement addresses, workshops, and grand rounds.
+    </div>
+  </div>
+</section>
 
-    <hr class="rule dbl reveal" aria-hidden="true" style="margin-top:3.2rem">
+<section class="section">
+  <div class="container">
+    <hr class="rule dbl reveal" aria-hidden="true">
     <p class="eyebrow reveal">What audiences say</p>
     <div class="praise">
       <div class="pcard reveal"><span class="mark" aria-hidden="true">&#8220;</span>
