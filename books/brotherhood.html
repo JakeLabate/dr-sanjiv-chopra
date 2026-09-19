@@ -455,6 +455,48 @@ html.js .reveal{opacity:0;transform:translateY(16px)}
 html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 @media (max-width:560px){.talk{grid-template-columns:1fr;gap:.45rem;padding:1.6rem 0}
   .talk .kw{display:flex;gap:.5rem;align-items:baseline}.talk .kw .ix{display:inline}}
+
+/* ============ 3D books ============ */
+.scene3{perspective:1500px;display:block}
+.bk3{position:relative;display:block;transform-style:preserve-3d;transform:rotateY(-28deg);
+  transition:transform .65s cubic-bezier(.2,.85,.3,1.08);text-decoration:none}
+.bk3 .f3,.bk3 .b3,.bk3 .s3,.bk3 .p3{position:absolute}
+.bk3 .f3{inset:0;transform:translateZ(var(--bd,17px));border-radius:2px 5px 5px 2px;overflow:hidden;
+  box-shadow:inset 4px 0 10px rgba(0,0,0,.14)}
+.bk3 .f3 img{width:100%;height:100%;object-fit:cover;display:block}
+.bk3 .b3{inset:0;transform:translateZ(calc(var(--bd,17px)*-1)) rotateY(180deg);border-radius:2px 5px 5px 2px}
+.bk3 .s3{width:calc(var(--bd,17px)*2);height:100%;left:calc(var(--bd,17px)*-1);transform:rotateY(-90deg);
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.bk3 .s3 span{writing-mode:vertical-rl;font-family:"Fraunces";font-weight:500;font-size:.72rem;
+  letter-spacing:.12em;color:var(--cream);white-space:nowrap;text-transform:uppercase}
+.bk3 .p3{width:calc(var(--bd,17px)*2 - 5px);height:calc(100% - 8px);right:calc(var(--bd,17px)*-1 + 2px);
+  top:4px;transform:rotateY(90deg);border-radius:0 3px 3px 0;
+  background:repeating-linear-gradient(to right,#f6f1e6 0 2px,#e7dfcd 2px 3px)}
+.bk3.crimson .s3,.bk3.crimson .b3{background:linear-gradient(160deg,#7d1a2a,#4C0D18)}
+.bk3.ink .s3,.bk3.ink .b3{background:linear-gradient(160deg,#3a2f2a,#241A16)}
+.bk3-shadow{height:24px;width:78%;margin:22px auto 0;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(30,8,14,.35),transparent);
+  transition:transform .65s,opacity .65s}
+/* A: standing volume on detail + feature */
+.scene3.lg3{padding:6px 0 0 20px}
+.scene3.lg3:hover .bk3,.scene3.lg3:focus-within .bk3{transform:rotateY(-8deg) translateY(-12px)}
+.scene3.lg3:hover .bk3-shadow{transform:scaleX(1.1);opacity:.72}
+/* B: shelf pull */
+.shelf{perspective:1600px;padding-top:30px;padding-left:44px;padding-bottom:26px;align-items:center}
+.shelf .bookc{width:var(--slot,104px)}
+.shelf .bk3{transform:rotateY(-62deg);margin:0 auto}
+.shelf .bookc:hover .bk3,.shelf .bookc:focus-visible .bk3{
+  transform:rotateY(-14deg) translateZ(74px) translateY(-10px)}
+.shelf .bookc:hover,.shelf .bookc:focus-visible{z-index:6}
+.shelf .bookc{position:relative}
+.shelf .meta{margin-top:1.1rem}
+.shelf .meta .t{font-size:.8rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.shelf .meta .s{font-size:.7rem}
+@media (hover:none){.shelf .bk3{transform:rotateY(-42deg)}
+  .shelf .bookc{width:calc(var(--slot,104px)*1.5)}
+  .scene3.lg3 .bk3{transform:rotateY(-18deg)}}
+@media (prefers-reduced-motion:reduce){.bk3,.bk3-shadow{transition:none}
+  .shelf .bookc:hover .bk3{transform:rotateY(-62deg)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","image":"https://chopra.jakelabate.com/photos/portrait-2.jpg","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
 </head>
@@ -490,14 +532,9 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
   <div class="container">
     <div class="spot">
       <div class="reveal">
-        <div class="cover-box lg">
-          <div class="plate crimson">
-            <span class="plate-kicker">Memoir</span>
-            <span class="plate-title">Brotherhood</span>
-            <span class="plate-sub">with Deepak Chopra &#183; 2013</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/brotherhood.jpg" alt="Cover of Brotherhood" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
+        <div class="scene3 lg3">
+          <a class="bk3 crimson" href="https://www.amazon.com/dp/0544032101" rel="noopener nofollow" target="_blank" style="width:261px;height:430px;--bd:17px" aria-label="Brotherhood"><span class="s3"><span>Brotherhood</span></span><span class="f3"><img src="/covers/brotherhood.jpg" alt="Cover of Brotherhood" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></a>
+          <div class="bk3-shadow"></div>
         </div>
       </div>
       <div>
@@ -525,127 +562,28 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <p class="eyebrow reveal">More from the shelf</p>
     <div class="shelf-wrap reveal">
       <button class="shelf-btn prev" type="button" aria-label="Scroll books back">&larr;</button>
-      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><a class="bookc" role="listitem" href="/books/two-most-important-days">
-        <div class="cover-box">
-          <div class="plate ink">
-            <span class="plate-kicker">Purpose</span>
-            <span class="plate-title">The Two Most Important Days</span>
-            <span class="plate-sub">with Gina Vild &#183; 2017</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/two-most-important-days.jpg" alt="Cover of The Two Most Important Days" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">The Two Most Important Days</div><div class="s">with Gina Vild &#183; 2017</div></div>
-      </a><a class="bookc" role="listitem" href="/books/leadership-by-example">
-        <div class="cover-box">
-          <div class="plate crimson">
-            <span class="plate-kicker">Leadership</span>
-            <span class="plate-title">Leadership by Example</span>
-            <span class="plate-sub">with David Fisher &#183; 2012</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/leadership-by-example.webp" alt="Cover of Leadership by Example" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Leadership by Example</div><div class="s">with David Fisher &#183; 2012</div></div>
-      </a><a class="bookc" role="listitem" href="/books/big-five">
-        <div class="cover-box">
-          <div class="plate ink">
-            <span class="plate-kicker">Health</span>
-            <span class="plate-title">The Big Five</span>
-            <span class="plate-sub">with David Fisher &#183; 2016</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/big-five.webp" alt="Cover of The Big Five" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">The Big Five</div><div class="s">with David Fisher &#183; 2016</div></div>
-      </a><a class="bookc" role="listitem" href="/books/live-better-live-longer">
-        <div class="cover-box">
-          <div class="plate crimson">
-            <span class="plate-kicker">Health</span>
-            <span class="plate-title">Live Better, Live Longer</span>
-            <span class="plate-sub">2012</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/live-better-live-longer.webp" alt="Cover of Live Better, Live Longer" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Live Better, Live Longer</div><div class="s">2012</div></div>
-      </a><a class="bookc" role="listitem" href="/books/doctor-chopra-says">
-        <div class="cover-box">
-          <div class="plate ink">
-            <span class="plate-kicker">Medicine</span>
-            <span class="plate-title">Doctor Chopra Says</span>
-            <span class="plate-sub">with Alan Lotvin and David Fisher &#183; 2010</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/doctor-chopra-says.jpg" alt="Cover of Doctor Chopra Says" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Doctor Chopra Says</div><div class="s">with Alan Lotvin and David Fisher &#183; 2010</div></div>
-      </a><a class="bookc" role="listitem" href="/books/is-wine-the-best-medicine">
-        <div class="cover-box">
-          <div class="plate crimson">
-            <span class="plate-kicker">Medicine</span>
-            <span class="plate-title">Is Wine the Best Medicine?</span>
-            <span class="plate-sub">with Alan Lotvin and David Fisher &#183; 2011</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/is-wine-the-best-medicine.webp" alt="Cover of Is Wine the Best Medicine?" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Is Wine the Best Medicine?</div><div class="s">with Alan Lotvin and David Fisher &#183; 2011</div></div>
-      </a><a class="bookc" role="listitem" href="/books/coffee-the-magical-elixir">
-        <div class="cover-box">
-          <div class="plate ink">
-            <span class="plate-kicker">Health</span>
-            <span class="plate-title">Coffee the Magical Elixir</span>
-            <span class="plate-sub">with Deepak Chopra &#183; 2021</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/coffee-the-magical-elixir.jpg" alt="Cover of Coffee the Magical Elixir" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Coffee the Magical Elixir</div><div class="s">with Deepak Chopra &#183; 2021</div></div>
-      </a><a class="bookc" role="listitem" href="/books/conquer-your-diabetes">
-        <div class="cover-box">
-          <div class="plate crimson">
-            <span class="plate-kicker">Medicine</span>
-            <span class="plate-title">Conquer Your Diabetes</span>
-            <span class="plate-sub">with Martin Abrahamson</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/conquer-your-diabetes.webp" alt="Cover of Conquer Your Diabetes" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Conquer Your Diabetes</div><div class="s">with Martin Abrahamson</div></div>
-      </a><a class="bookc" role="listitem" href="/books/letters-to-a-young-doctor">
-        <div class="cover-box">
-          <div class="plate ink">
-            <span class="plate-kicker">Medicine</span>
-            <span class="plate-title">Letters to a Young Doctor</span>
-            <span class="plate-sub">with Pankaj Vij &#183; 2024</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/letters-to-a-young-doctor.webp" alt="Cover of Letters to a Young Doctor" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Letters to a Young Doctor</div><div class="s">with Pankaj Vij &#183; 2024</div></div>
-      </a><a class="bookc" role="listitem" href="/books/ignite-the-fire-within">
-        <div class="cover-box">
-          <div class="plate crimson">
-            <span class="plate-kicker">Communication</span>
-            <span class="plate-title">Ignite the Fire Within</span>
-            <span class="plate-sub">with Rick Najera</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/ignite-the-fire-within.webp" alt="Cover of Ignite the Fire Within" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">Ignite the Fire Within</div><div class="s">with Rick Najera</div></div>
-      </a><a class="bookc" role="listitem" href="/books/liver-book">
-        <div class="cover-box">
-          <div class="plate ink">
-            <span class="plate-kicker">Reference</span>
-            <span class="plate-title">The Liver Book</span>
-            <span class="plate-sub">2001</span>
-            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
-          </div>
-          <img class="cover" src="/covers/liver-book.jpg" alt="Cover of The Liver Book" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
-        </div>
-        <div class="meta"><div class="t">The Liver Book</div><div class="s">2001</div></div>
+      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><a class="bookc" role="listitem" href="/books/two-most-important-days" style="--slot:84px" title="The Two Most Important Days">
+        <span class="scene3"><span class="bk3 ink" style="width:160px;height:240px;--bd:13px" aria-label="The Two Most Important Days"><span class="s3"><span>The Two Most Important Day</span></span><span class="f3"><img src="/covers/two-most-important-days.jpg" alt="Cover of The Two Most Important Days" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/leadership-by-example" style="--slot:87px" title="Leadership by Example">
+        <span class="scene3"><span class="bk3 crimson" style="width:169px;height:240px;--bd:13px" aria-label="Leadership by Example"><span class="s3"><span>Leadership by Example</span></span><span class="f3"><img src="/covers/leadership-by-example.webp" alt="Cover of Leadership by Example" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/big-five" style="--slot:84px" title="The Big Five">
+        <span class="scene3"><span class="bk3 ink" style="width:159px;height:240px;--bd:13px" aria-label="The Big Five"><span class="s3"><span>The Big Five</span></span><span class="f3"><img src="/covers/big-five.webp" alt="Cover of The Big Five" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/live-better-live-longer" style="--slot:85px" title="Live Better, Live Longer">
+        <span class="scene3"><span class="bk3 crimson" style="width:161px;height:240px;--bd:13px" aria-label="Live Better, Live Longer"><span class="s3"><span>Live Better, Live Longer</span></span><span class="f3"><img src="/covers/live-better-live-longer.webp" alt="Cover of Live Better, Live Longer" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/doctor-chopra-says" style="--slot:94px" title="Doctor Chopra Says">
+        <span class="scene3"><span class="bk3 ink" style="width:189px;height:240px;--bd:13px" aria-label="Doctor Chopra Says"><span class="s3"><span>Doctor Chopra Says</span></span><span class="f3"><img src="/covers/doctor-chopra-says.jpg" alt="Cover of Doctor Chopra Says" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/is-wine-the-best-medicine" style="--slot:91px" title="Is Wine the Best Medicine?">
+        <span class="scene3"><span class="bk3 crimson" style="width:180px;height:240px;--bd:13px" aria-label="Is Wine the Best Medicine?"><span class="s3"><span>Is Wine the Best Medicine?</span></span><span class="f3"><img src="/covers/is-wine-the-best-medicine.webp" alt="Cover of Is Wine the Best Medicine?" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/coffee-the-magical-elixir" style="--slot:83px" title="Coffee the Magical Elixir">
+        <span class="scene3"><span class="bk3 ink" style="width:155px;height:240px;--bd:13px" aria-label="Coffee the Magical Elixir"><span class="s3"><span>Coffee the Magical Elixir</span></span><span class="f3"><img src="/covers/coffee-the-magical-elixir.jpg" alt="Cover of Coffee the Magical Elixir" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/conquer-your-diabetes" style="--slot:84px" title="Conquer Your Diabetes">
+        <span class="scene3"><span class="bk3 crimson" style="width:160px;height:240px;--bd:13px" aria-label="Conquer Your Diabetes"><span class="s3"><span>Conquer Your Diabetes</span></span><span class="f3"><img src="/covers/conquer-your-diabetes.webp" alt="Cover of Conquer Your Diabetes" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/letters-to-a-young-doctor" style="--slot:81px" title="Letters to a Young Doctor">
+        <span class="scene3"><span class="bk3 ink" style="width:150px;height:240px;--bd:13px" aria-label="Letters to a Young Doctor"><span class="s3"><span>Letters to a Young Doctor</span></span><span class="f3"><img src="/covers/letters-to-a-young-doctor.webp" alt="Cover of Letters to a Young Doctor" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/ignite-the-fire-within" style="--slot:83px" title="Ignite the Fire Within">
+        <span class="scene3"><span class="bk3 crimson" style="width:155px;height:240px;--bd:13px" aria-label="Ignite the Fire Within"><span class="s3"><span>Ignite the Fire Within</span></span><span class="f3"><img src="/covers/ignite-the-fire-within.webp" alt="Cover of Ignite the Fire Within" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
+      </a><a class="bookc" role="listitem" href="/books/liver-book" style="--slot:85px" title="The Liver Book">
+        <span class="scene3"><span class="bk3 ink" style="width:161px;height:240px;--bd:13px" aria-label="The Liver Book"><span class="s3"><span>The Liver Book</span></span><span class="f3"><img src="/covers/liver-book.jpg" alt="Cover of The Liver Book" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
       </a></div>
       <button class="shelf-btn next" type="button" aria-label="Scroll books forward">&rarr;</button>
     </div>
