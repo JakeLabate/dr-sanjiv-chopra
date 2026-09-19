@@ -477,9 +477,11 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
   background:radial-gradient(closest-side,rgba(30,8,14,.35),transparent);
   transition:transform .65s,opacity .65s}
 /* A: standing volume on detail + feature */
-.scene3.lg3{padding:6px 0 0 20px}
+.scene3.lg3{padding:8px 10px 0;width:fit-content;margin:0 auto}
+.scene3.lg3 .bk3{margin:0 auto}
+.scene3.lg3 .bk3-shadow{transform:translateX(3px)}
 .scene3.lg3:hover .bk3,.scene3.lg3:focus-within .bk3{transform:rotateY(0deg) translateY(-10px)}
-.scene3.lg3:hover .bk3-shadow{transform:scaleX(1.1);opacity:.72}
+.scene3.lg3:hover .bk3-shadow{transform:translateX(3px) scaleX(1.1);opacity:.72}
 /* B: shelf pull */
 .shelf{perspective:1600px;padding-top:30px;padding-left:44px;padding-bottom:26px;align-items:center}
 .shelf .bookc{width:var(--slot,104px)}
