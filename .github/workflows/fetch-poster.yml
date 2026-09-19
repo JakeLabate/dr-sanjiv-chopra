@@ -1,0 +1,16 @@
+name: fetch-poster
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          url=$(curl -sL -A "Mozilla/5.0" "https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose" | grep -o '<meta property="og:image" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"$//')
+          echo "poster: $url"
+          curl -sL -A "Mozilla/5.0" -o ted-poster-raw.jpg "$url"
+          ls -la ted-poster-raw.jpg
+          git config user.name bot && git config user.email a@b.c
+          git add ted-poster-raw.jpg && git commit -m "TED poster" && git push
