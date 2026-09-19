@@ -322,13 +322,16 @@ a.spot-link{text-decoration:none;display:block}
 .shelf::-webkit-scrollbar{height:8px}
 .shelf::-webkit-scrollbar-track{background:var(--paper-2);border-radius:4px}
 .shelf::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
-.bookc{flex:0 0 190px;scroll-snap-align:start}
-.cover-box{position:relative;aspect-ratio:2/3;border-radius:var(--r-s);overflow:hidden;
+.bookc{flex:0 0 auto;scroll-snap-align:start}
+.cover-box{position:relative;height:285px;width:190px;border-radius:var(--r-s);overflow:hidden;
   box-shadow:0 12px 30px -18px rgba(53,9,18,.6);transition:transform .28s,box-shadow .28s}
+.cover-box.has-img{width:auto}
 .bookc:hover .cover-box{transform:translateY(-5px);box-shadow:0 22px 44px -20px rgba(53,9,18,.7)}
 .cover-box .plate{position:absolute;inset:0;min-height:0}
-.cover-box img.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4}
-.bookc .meta{padding:.8rem .15rem 0}
+.cover-box img.cover{position:absolute;inset:0 auto 0 0;display:block;height:285px;width:auto;
+  max-width:236px;object-fit:contain;z-index:4;opacity:0;transition:opacity .3s}
+.cover-box.has-img img.cover{position:relative;opacity:1}
+.bookc .meta{padding:.8rem .15rem 0;max-width:220px}
 .bookc .meta .t{font-family:"Fraunces";font-weight:500;font-size:1rem;line-height:1.2;color:var(--ink)}
 .bookc .meta .s{font-size:.72rem;color:var(--ink-soft);margin-top:.3rem;letter-spacing:.02em}
 .shelf-btn{position:absolute;top:38%;transform:translateY(-50%);z-index:6;width:42px;height:42px;
@@ -521,7 +524,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
             <span class="plate-sub">with Deepak Chopra &#183; 2013</span>
             <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
           </div>
-          <img class="cover" src="https://covers.openlibrary.org/b/id/11363658-L.jpg" alt="Cover of Brotherhood" loading="lazy" onerror="this.remove()">
+          <img class="cover" src="https://covers.openlibrary.org/b/id/11363658-L.jpg" alt="Cover of Brotherhood" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">Brotherhood</div><div class="s">with Deepak Chopra &#183; 2013</div></div>
       </div><div class="bookc" role="listitem">
@@ -532,7 +535,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
             <span class="plate-sub">with Gina Vild &#183; 2017</span>
             <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
           </div>
-          <img class="cover" src="https://covers.openlibrary.org/b/id/8881787-L.jpg" alt="Cover of The Two Most Important Days" loading="lazy" onerror="this.remove()">
+          <img class="cover" src="https://covers.openlibrary.org/b/id/8881787-L.jpg" alt="Cover of The Two Most Important Days" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">The Two Most Important Days</div><div class="s">with Gina Vild &#183; 2017</div></div>
       </div><div class="bookc" role="listitem">
@@ -543,7 +546,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
             <span class="plate-sub">with David Fisher &#183; 2012</span>
             <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
           </div>
-          <img class="cover" src="https://covers.openlibrary.org/b/id/9508231-L.jpg" alt="Cover of Leadership by Example" loading="lazy" onerror="this.remove()">
+          <img class="cover" src="https://covers.openlibrary.org/b/id/9508231-L.jpg" alt="Cover of Leadership by Example" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">Leadership by Example</div><div class="s">with David Fisher &#183; 2012</div></div>
       </div><div class="bookc" role="listitem">
@@ -598,7 +601,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
             <span class="plate-sub">with Deepak Chopra &#183; 2021</span>
             <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
           </div>
-          <img class="cover" src="https://covers.openlibrary.org/b/id/14754664-L.jpg" alt="Cover of Coffee the Magical Elixir" loading="lazy" onerror="this.remove()">
+          <img class="cover" src="https://covers.openlibrary.org/b/id/14754664-L.jpg" alt="Cover of Coffee the Magical Elixir" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">Coffee the Magical Elixir</div><div class="s">with Deepak Chopra &#183; 2021</div></div>
       </div><div class="bookc" role="listitem">
@@ -642,7 +645,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
             <span class="plate-sub">2001</span>
             <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
           </div>
-          <img class="cover" src="https://covers.openlibrary.org/b/id/475780-L.jpg" alt="Cover of The Liver Book" loading="lazy" onerror="this.remove()">
+          <img class="cover" src="https://covers.openlibrary.org/b/id/475780-L.jpg" alt="Cover of The Liver Book" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">The Liver Book</div><div class="s">2001</div></div>
       </div></div>
