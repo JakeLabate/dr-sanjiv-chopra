@@ -507,6 +507,11 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
 .tl .tk-role{color:var(--ink);border-color:var(--ink-soft)}
 .countries span{display:inline-flex;align-items:center;gap:.55rem}
 .countries svg{width:21px;height:14px;border-radius:2px;box-shadow:0 0 0 1px var(--line);flex:none}
+.soc-row a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  border:1px solid rgba(216,174,90,.4);border-radius:50%;color:var(--cream);
+  transition:border-color .2s,color .2s,transform .2s}
+.soc-row a:hover{border-color:var(--gold);color:var(--gold-bright);transform:translateY(-2px)}
+.soc-row a svg{width:16px;height:16px;fill:currentColor;display:block}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","image":"https://chopra.jakelabate.com/photos/portrait-2.jpg","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
 </head>
@@ -636,10 +641,13 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <a href="/contact">Contact</a>
         <a href="/#booking">Booking</a>
       </nav>
-      <nav class="foot-nav" aria-label="Social">
-        <a href="https://www.facebook.com/DrSanjivChopra" rel="noopener" target="_blank">Facebook</a>
-        <a href="https://twitter.com/sanjiv_chopra" rel="noopener" target="_blank">X</a>
-        <a href="https://www.youtube.com/user/chopraleadership" rel="noopener" target="_blank">YouTube</a>
+      <nav class="foot-nav soc-row" aria-label="Social">
+        <a href="https://www.facebook.com/DrSanjivChopra" rel="noopener" target="_blank" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.1 24v-9.3h3.1l.5-3.6h-3.6V8.8c0-1.04.29-1.75 1.79-1.75h1.91V3.84c-.33-.05-1.47-.14-2.79-.14-2.76 0-4.65 1.68-4.65 4.77v2.67H8.2v3.6h3.16V24h3.74z"/></svg></a>
+        <a href="https://twitter.com/sanjiv_chopra" rel="noopener" target="_blank" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2.1H22l-6.8 7.8 8 12h-6.3l-4.93-6.45L6.35 21.9H3.24l7.28-8.32L2.8 2.1h6.46l4.46 5.9 5.18-5.9zm-1.09 18h1.72L7.84 3.9H6L17.81 20.1z"/></svg></a>
+        <a href="https://www.youtube.com/user/chopraleadership" rel="noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+        <a href="https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose" rel="noopener" target="_blank" aria-label="TED" title="TED"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="15.6" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="8.6" font-weight="800" letter-spacing=".5" fill="currentColor">TED</text></svg></a>
+        <a href="https://en.wikipedia.org/wiki/Sanjiv_Chopra" rel="noopener" target="_blank" aria-label="Wikipedia" title="Wikipedia"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.6" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="500" fill="currentColor">W</text></svg></a>
+        <a href="https://www.amazon.com/stores/author/B001HQ4IR2" rel="noopener" target="_blank" aria-label="Amazon" title="Amazon"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="13.5" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" fill="currentColor">a</text><path d="M5.4 16.2c3.7 2.5 9.5 2.7 13.2 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M18.6 16.2l.9-1 .2 1.9-1.9.1z"/></svg></a>
       </nav>
     </div>
     <p class="foot-fine">&copy; 2026 Sanjiv Chopra. All rights reserved. &#183; <a href="/privacy">Privacy</a></p>
