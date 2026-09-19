@@ -343,6 +343,14 @@ a.spot-link{text-decoration:none;display:block}
 .shelf-btn.next{right:-14px}
 @media (max-width:900px){.shelf-btn{display:none}}
 
+/* book detail */
+a.bookc{text-decoration:none;color:inherit;display:block}
+.cover-box.lg{height:430px;width:287px}
+.cover-box.lg.has-img{width:fit-content}
+.cover-box.lg img.cover{height:430px;max-width:356px}
+.cover-box.lg .plate-title{font-size:1.9rem}
+.bkfacts{margin-top:2rem}
+
 /* post-nominals */
 .postnoms{display:block;font-family:"Inter";font-weight:600;font-size:clamp(.78rem,1.3vw,.95rem);
   letter-spacing:.14em;color:var(--gold-bright);margin-top:.6rem}
@@ -433,6 +441,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <h2>From splintered to centered.</h2>
         <p>Dr. Chopra&#39;s seventeenth book, <em>From Splintered to Centered: The 7 Dimensions of the Soul</em>, explores what it takes to move from a scattered life to a centered one. Publication details will be announced soon.</p>
         <p style="margin-bottom:0">It joins a shelf of more than fifteen titles spanning medicine, leadership, well-being, and memoir.</p>
+        <a class="morelink" href="book-from-splintered-to-centered.html">About the forthcoming book <span class="ar">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -445,10 +454,11 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <p class="eyebrow reveal">The shelf</p>
         <h2 class="big reveal">All published titles</h2>
       </div>
+      <p class="lede reveal">Select any title for its own page.</p>
     </div>
     <div class="shelf-wrap reveal">
       <button class="shelf-btn prev" type="button" aria-label="Scroll books back">&larr;</button>
-      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><div class="bookc" role="listitem">
+      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><a class="bookc" role="listitem" href="book-brotherhood.html">
         <div class="cover-box">
           <div class="plate crimson">
             <span class="plate-kicker">Memoir</span>
@@ -459,7 +469,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           <img class="cover" src="https://covers.openlibrary.org/b/id/11363658-L.jpg" alt="Cover of Brotherhood" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">Brotherhood</div><div class="s">with Deepak Chopra &#183; 2013</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-two-most-important-days.html">
         <div class="cover-box">
           <div class="plate ink">
             <span class="plate-kicker">Purpose</span>
@@ -470,7 +480,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           <img class="cover" src="https://covers.openlibrary.org/b/id/8881787-L.jpg" alt="Cover of The Two Most Important Days" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">The Two Most Important Days</div><div class="s">with Gina Vild &#183; 2017</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-leadership-by-example.html">
         <div class="cover-box">
           <div class="plate crimson">
             <span class="plate-kicker">Leadership</span>
@@ -481,7 +491,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Leadership by Example</div><div class="s">with David Fisher &#183; 2012</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-big-five.html">
         <div class="cover-box">
           <div class="plate ink">
             <span class="plate-kicker">Health</span>
@@ -492,7 +502,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">The Big Five</div><div class="s">with David Fisher &#183; 2016</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-live-better-live-longer.html">
         <div class="cover-box">
           <div class="plate crimson">
             <span class="plate-kicker">Health</span>
@@ -503,7 +513,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Live Better, Live Longer</div><div class="s">2012</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-doctor-chopra-says.html">
         <div class="cover-box">
           <div class="plate ink">
             <span class="plate-kicker">Medicine</span>
@@ -514,7 +524,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Doctor Chopra Says</div><div class="s">with Alan Lotvin and David Fisher &#183; 2010</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-is-wine-the-best-medicine.html">
         <div class="cover-box">
           <div class="plate crimson">
             <span class="plate-kicker">Medicine</span>
@@ -525,7 +535,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Is Wine the Best Medicine?</div><div class="s">with Alan Lotvin and David Fisher &#183; 2011</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-coffee-the-magical-elixir.html">
         <div class="cover-box">
           <div class="plate ink">
             <span class="plate-kicker">Health</span>
@@ -536,7 +546,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           <img class="cover" src="https://covers.openlibrary.org/b/id/14754664-L.jpg" alt="Cover of Coffee the Magical Elixir" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">Coffee the Magical Elixir</div><div class="s">with Deepak Chopra &#183; 2021</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-conquer-your-diabetes.html">
         <div class="cover-box">
           <div class="plate crimson">
             <span class="plate-kicker">Medicine</span>
@@ -547,7 +557,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Conquer Your Diabetes</div><div class="s">with Martin Abrahamson</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-letters-to-a-young-doctor.html">
         <div class="cover-box">
           <div class="plate ink">
             <span class="plate-kicker">Medicine</span>
@@ -558,7 +568,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Letters to a Young Doctor</div><div class="s">with Pankaj Vij</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-ignite-the-fire-within.html">
         <div class="cover-box">
           <div class="plate crimson">
             <span class="plate-kicker">Inspiration</span>
@@ -569,7 +579,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           
         </div>
         <div class="meta"><div class="t">Ignite the Fire Within</div><div class="s">with Rick Najera</div></div>
-      </div><div class="bookc" role="listitem">
+      </a><a class="bookc" role="listitem" href="book-liver-book.html">
         <div class="cover-box">
           <div class="plate ink">
             <span class="plate-kicker">Reference</span>
@@ -580,7 +590,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           <img class="cover" src="https://covers.openlibrary.org/b/id/475780-L.jpg" alt="Cover of The Liver Book" decoding="async" onload="this.parentElement.classList.add(&quot;has-img&quot;)" onerror="this.remove()">
         </div>
         <div class="meta"><div class="t">The Liver Book</div><div class="s">2001</div></div>
-      </div></div>
+      </a></div>
       <button class="shelf-btn next" type="button" aria-label="Scroll books forward">&rarr;</button>
     </div>
 
