@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dr. Sanjiv Chopra | Harvard Physician, Author & Keynote Speaker</title>
+<title>Sanjiv Chopra, MD, MACP, FRCP (London) | Harvard Physician, Author & Keynote Speaker</title>
 <meta name="description" content="Sanjiv Chopra, MD, is a professor of medicine at Harvard Medical School, a best-selling author, and a keynote speaker on leadership, healthy living, and living with purpose.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -314,11 +314,52 @@ a.spot-link{text-decoration:none;display:block}
 .foot-fine a{color:var(--gold-bright);text-decoration:none}
 @media (max-width:620px){.foot-top{grid-template-columns:1fr;text-align:center;justify-items:center}}
 
+/* post-nominals */
+.postnoms{display:block;font-family:"Inter";font-weight:600;font-size:clamp(.78rem,1.3vw,.95rem);
+  letter-spacing:.14em;color:var(--gold-bright);margin-top:.6rem}
+
+/* honors */
+.honors{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;
+  margin-top:1.6rem;margin-bottom:3rem}
+.honor{border:1px solid var(--line);border-radius:var(--r-m);padding:1.05rem 1.2rem;background:var(--paper-2)}
+.honor .y{font-family:"Fraunces";font-weight:500;font-size:1.4rem;color:var(--gold-ink);line-height:1;
+  font-variant-numeric:oldstyle-nums}
+.honor .t{font-size:.92rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.4}
+
+/* quotes */
+.epi{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:2rem;margin-bottom:2.6rem}
+.epi blockquote{margin:0;font-family:"Fraunces";font-style:italic;font-weight:400;
+  font-size:clamp(1.3rem,2.4vw,1.8rem);line-height:1.35;color:var(--ink);text-wrap:balance}
+.epi .src{margin-top:.9rem;font-size:.78rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold-ink)}
+.qb{position:relative;padding:2.3rem 0 2.3rem 2.4rem;border-top:1px solid var(--line)}
+.qb:first-of-type{border-top:0}
+.qb .mark{position:absolute;left:0;top:2.1rem;font-family:"Fraunces";font-size:2.6rem;
+  line-height:1;color:var(--gold)}
+.qb blockquote{margin:0;font-family:"Fraunces";font-style:italic;font-weight:400;
+  font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.28;color:var(--crimson);max-width:28ch;text-wrap:balance}
+.qb .src{margin-top:1.1rem;font-size:.8rem;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--gold-ink)}
+
+/* praise */
+.praise{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2.2rem}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:1.7rem 1.6rem}
+.pcard .mark{font-family:"Fraunces";font-size:2.4rem;line-height:.7;color:var(--gold);
+  display:block;margin-bottom:.7rem}
+.pcard blockquote{margin:0;font-family:"Fraunces";font-style:italic;font-size:1.25rem;
+  line-height:1.4;color:var(--ink)}
+.pcard .src{margin-top:.9rem;font-size:.74rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold-ink)}
+.praise-note{margin-top:1.4rem;font-size:.85rem;color:var(--ink-soft)}
+
 /* reveal */
 html.js .reveal{opacity:0;transform:translateY(16px)}
 @media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
 html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://jakelabate.github.io/dr-sanjiv-chopra/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -326,13 +367,13 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
   <div class="container head-row">
     <a class="brand" href="index.html" aria-label="Dr. Sanjiv Chopra, home">
       <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="Sanjiv Chopra monogram"><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="mono" x="100" y="128">SC</text></svg>
-      <span class="brand-name">Sanjiv Chopra<small>Harvard Medical School</small></span>
+      <span class="brand-name">Sanjiv Chopra<small>MD, MACP, FRCP (London)</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
     </button>
     <nav class="primary" id="nav" aria-label="Primary">
-      <a href="about.html" class="">About<span class="u"></span></a><a href="speaking.html" class="">Speaking<span class="u"></span></a><a href="books.html" class="">Books<span class="u"></span></a><a href="big-five.html" class="">Big Five<span class="u"></span></a><a href="media.html" class="">Media<span class="u"></span></a>
+      <a href="about.html" class="">About<span class="u"></span></a><a href="speaking.html" class="">Speaking<span class="u"></span></a><a href="books.html" class="">Books<span class="u"></span></a><a href="big-five.html" class="">Big Five<span class="u"></span></a><a href="media.html" class="">Media<span class="u"></span></a><a href="quotes.html" class="">Quotes<span class="u"></span></a>
       <a class="book-btn" href="#booking">Booking</a>
     </nav>
   </div>
@@ -344,7 +385,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <div class="hero-grid">
       <div>
         <p class="eyebrow on-dark reveal">Professor of Medicine &#183; Harvard Medical School</p>
-        <h1 class="reveal">Sanjiv Chopra, MD</h1>
+        <h1 class="reveal">Sanjiv Chopra<span class="postnoms">MD, MACP, FRCP (London)</span></h1>
         <p class="sub reveal">A hepatologist, <span class="nb">best-selling</span> author, and keynote speaker.</p>
         <p class="lede reveal">For four decades he has taught medicine at Harvard. For nearly as long he has carried a second message to audiences in more than twenty-five countries: that a life of meaning is built on a few deliberate principles.</p>
         <div class="hero-cta reveal">
@@ -355,10 +396,10 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
           <div><b>40+</b>years on the Harvard faculty</div>
           <div><b>25+</b>countries lectured in</div>
           <div><b>80,000</b>clinicians reached yearly as Faculty Dean for CME</div>
-          <div><b>10+</b>books authored</div>
+          <div><b>15+</b>books authored</div>
         </div>
       </div>
-      <div class="reveal" aria-hidden="true"><svg class="seal hero-seal" viewBox="0 0 200 200" role="img" aria-label="Dr. Sanjiv Chopra, MD seal"><defs><path id="arcHero" fill="none" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="arc-text"><textPath href="#arcHero" startOffset="0">DR. SANJIV CHOPRA &#183; HARVARD MEDICAL SCHOOL &#183; </textPath></text><text class="mono" x="100" y="118">SC</text><text class="md" x="100" y="150">M D</text><path class="star" d="M100 30 l2.1 5.4 5.8.4 -4.5 3.7 1.5 5.6 -4.9-3.2 -4.9 3.2 1.5-5.6 -4.5-3.7 5.8-.4z"/></svg></div>
+      <div class="reveal" aria-hidden="true"><svg class="seal hero-seal" viewBox="0 0 200 200" role="img" aria-label="Sanjiv Chopra, MD, MACP, FRCP (London) seal"><defs><path id="arcHero" fill="none" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="arc-text"><textPath href="#arcHero" startOffset="0">SANJIV CHOPRA &#183; MD &#183; MACP &#183; FRCP (LONDON) &#183; </textPath></text><text class="mono" x="100" y="118">SC</text><text class="md" x="100" y="150">M D</text><path class="star" d="M100 30 l2.1 5.4 5.8.4 -4.5 3.7 1.5 5.6 -4.9-3.2 -4.9 3.2 1.5-5.6 -4.5-3.7 5.8-.4z"/></svg></div>
     </div>
   </div>
 </section>
@@ -370,7 +411,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <div class="brief">
       <div class="body reveal">
         <h2 class="big" style="margin-bottom:1.2rem">Two vocations, one throughline.</h2>
-        <p>Sanjiv Chopra came to the United States from India in 1972 and has been on the faculty of Harvard Medical School since 1979. A hepatologist by training, he served for twelve years as Faculty Dean for Continuing Medical Education at Harvard and is the Marshall Wolf Distinguished Clinician Educator at Brigham and Women&#39;s Hospital. He is Editor-in-Chief of the hepatology section of UpToDate, the clinical reference physicians rely on worldwide.</p>
+        <p>Sanjiv Chopra came to the United States from India in 1972 and has been on the faculty of Harvard Medical School since 1979. A hepatologist by training, he served for twelve years as Faculty Dean for Continuing Medical Education at Harvard and served as the Marshall Wolf Distinguished Clinician Educator at Brigham and Women&#39;s Hospital. He is Editor-in-Chief of the hepatology section of UpToDate, the electronic textbook of medicine subscribed to by some two million clinicians in 195 countries.</p>
         <p>Alongside that career he became a sought-after speaker. Drawing on medicine, history, and the lives of great leaders, he lectures on leadership, healthy living, and the pursuit of a joy-filled life. With his brother Deepak he wrote the double memoir <em>Brotherhood</em>, the story of two immigrants who took very different paths into medicine.</p>
         <a class="morelink" href="about.html">Read the full biography <span class="ar">&rarr;</span></a>
       </div>
@@ -378,12 +419,13 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <h3>Appointments &amp; honors</h3>
         <ul>
           <li><b>Professor of Medicine</b>, Harvard Medical School</li>
-          <li><b>Marshall Wolf Distinguished Clinician Educator</b>, Brigham and Women&#39;s Hospital</li>
+          <li><b>Former Marshall Wolf Distinguished Clinician Educator</b>, Brigham and Women&#39;s Hospital</li>
           <li><b>Senior Consultant in Hepatology</b>, Beth Israel Deaconess Medical Center</li>
           <li><b>Editor-in-Chief, Hepatology</b>, UpToDate</li>
           <li><b>Master</b>, American College of Physicians (2009)</li>
           <li><b>Ellis Island Medal of Honor</b> (2012)</li>
           <li><b>Fellow</b>, Royal College of Physicians, London (2021)</li>
+          <li><b>Great Immigrants, Great Americans</b>, Andrew Carnegie Foundation (2026)</li>
         </ul>
       </aside>
     </div>
@@ -441,7 +483,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <p class="eyebrow reveal">04 &#183; Books</p>
         <h2 class="big reveal">Selected books</h2>
       </div>
-      <p class="lede reveal">More than ten titles spanning medicine, leadership, well-being, and memoir.</p>
+      <p class="lede reveal">More than fifteen titles spanning medicine, leadership, well-being, and memoir, with his seventeenth on the way.</p>
     </div>
     <div class="books">
       <article class="book reveal">
@@ -502,7 +544,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <hr class="rule reveal" aria-hidden="true" style="border-color:var(--gold-bright)">
     <p class="eyebrow on-dark reveal">Booking &amp; inquiries</p>
     <h2 class="reveal">Bring Dr. Chopra to your stage.</h2>
-    <p class="lede reveal">Dr. Chopra speaks to corporations, hospitals, universities, and conferences worldwide on leadership, well-being, and the practice of a purposeful life. Inquiries are welcome.</p>
+    <p class="lede reveal">Dr. Chopra speaks to corporations, hospitals, universities, academic societies, CEO clubs, wealth management firms, and conferences worldwide on leadership, well-being, and the practice of a purposeful life. Inquiries are welcome.</p>
     <div class="chan">
       <a class="reveal" href="https://www.creativewell.com/lecture-division/speaker?id=dr-sanjiv-chopra" rel="noopener" target="_blank">
         <div class="k">Keynote booking</div><div class="v">CreativeWell &rarr;</div></a>
@@ -520,9 +562,9 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
 <footer class="site-foot">
   <div class="container">
     <div class="foot-top">
-      <svg class="seal foot-seal" viewBox="0 0 200 200" role="img" aria-label="Dr. Sanjiv Chopra, MD seal"><defs><path id="arcFoot" fill="none" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="arc-text"><textPath href="#arcFoot" startOffset="0">DR. SANJIV CHOPRA &#183; HARVARD MEDICAL SCHOOL &#183; </textPath></text><text class="mono" x="100" y="118">SC</text><text class="md" x="100" y="150">M D</text><path class="star" d="M100 30 l2.1 5.4 5.8.4 -4.5 3.7 1.5 5.6 -4.9-3.2 -4.9 3.2 1.5-5.6 -4.5-3.7 5.8-.4z"/></svg>
+      <svg class="seal foot-seal" viewBox="0 0 200 200" role="img" aria-label="Sanjiv Chopra, MD, MACP, FRCP (London) seal"><defs><path id="arcFoot" fill="none" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><circle class="ring" cx="100" cy="100" r="94"/><circle class="ring-2" cx="100" cy="100" r="83"/><text class="arc-text"><textPath href="#arcFoot" startOffset="0">SANJIV CHOPRA &#183; MD &#183; MACP &#183; FRCP (LONDON) &#183; </textPath></text><text class="mono" x="100" y="118">SC</text><text class="md" x="100" y="150">M D</text><path class="star" d="M100 30 l2.1 5.4 5.8.4 -4.5 3.7 1.5 5.6 -4.9-3.2 -4.9 3.2 1.5-5.6 -4.5-3.7 5.8-.4z"/></svg>
       <div class="foot-brand">
-        <h2>Sanjiv Chopra, MD</h2>
+        <h2>Sanjiv Chopra, MD, MACP, FRCP (London)</h2>
         <p>Professor of Medicine at Harvard Medical School. Author and keynote speaker on leadership, healthy living, and living with purpose.</p>
       </div>
     </div>
@@ -534,6 +576,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <a href="books.html">Books</a>
         <a href="big-five.html">The Big Five</a>
         <a href="media.html">Media</a>
+        <a href="quotes.html">Quotes</a>
         <a href="index.html#booking">Booking</a>
       </nav>
       <nav class="foot-nav" aria-label="Social">
@@ -542,7 +585,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <a href="https://www.youtube.com/user/chopraleadership" rel="noopener" target="_blank">YouTube</a>
       </nav>
     </div>
-    <p class="foot-fine">This site presents publicly available information about Dr. Sanjiv Chopra for speaking and editorial inquiries. For official updates, visit <a href="https://sanjivchopra.com" rel="noopener" target="_blank">sanjivchopra.com</a>. &copy; 2026.</p>
+    <p class="foot-fine">This site presents publicly available information about Sanjiv Chopra, MD, MACP, FRCP (London) for speaking and editorial inquiries. For official updates, visit <a href="https://sanjivchopra.com" rel="noopener" target="_blank">sanjivchopra.com</a>. &copy; 2026.</p>
   </div>
 </footer>
 <script>
