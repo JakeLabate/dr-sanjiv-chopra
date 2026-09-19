@@ -541,8 +541,18 @@ a.btn .ar{margin-left:.3rem}
   color:#fff;box-shadow:0 14px 34px -12px rgba(0,0,0,.6);transition:transform .25s,background .25s}
 .vfacade:hover .vplay{transform:translate(-50%,-50%) scale(1.08);background:var(--crimson)}
 .vfacade .vplay svg{width:30px;height:30px;margin-left:4px}
+.crumbbar{background:var(--paper);border-bottom:1px solid var(--line)}
+.crumbrow{display:flex;align-items:center;gap:.55rem;height:44px;font-family:"Inter";font-size:.82rem;
+  overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.crumbrow::-webkit-scrollbar{display:none}
+.crumbrow a{color:var(--ink-soft);text-decoration:none;padding:.25rem .5rem;margin:0 -.5rem;border-radius:4px;
+  transition:color .15s,background .15s}
+.crumbrow a:hover{color:var(--crimson);background:var(--paper-2)}
+.crumbrow .sep{color:var(--gold);font-size:.95rem;line-height:1}
+.crumbrow [aria-current="page"]{color:var(--ink);font-weight:600;overflow:hidden;text-overflow:ellipsis}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","image":"https://chopra.jakelabate.com/photos/portrait-2.jpg","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://chopra.jakelabate.com/"},{"@type":"ListItem","position":2,"name":"Speaking","item":"https://chopra.jakelabate.com/speaking"},{"@type":"ListItem","position":3,"name":"Microbiome, Man and Medicine","item":"https://chopra.jakelabate.com/speaking/microbiome-man-medicine"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -561,6 +571,7 @@ a.btn .ar{margin-left:.3rem}
     </nav>
   </div>
 </header>
+<nav class="crumbbar" aria-label="Breadcrumb"><div class="container"><div class="crumbrow"><a href="/">Home</a><span class="sep" aria-hidden="true">&#8250;</span><a href="/speaking/">Speaking</a><span class="sep" aria-hidden="true">&#8250;</span><span aria-current="page">Microbiome, Man and Medicine</span></div></div></nav>
 <main id="main">
 
 <section class="ptop">
