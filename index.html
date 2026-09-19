@@ -343,6 +343,22 @@ a.spot-link{text-decoration:none;display:block}
 .shelf-btn.next{right:-14px}
 @media (max-width:900px){.shelf-btn{display:none}}
 
+/* talks + audiences */
+.talk h3 a{color:inherit;text-decoration:none;transition:color .2s}
+.talk h3 a:hover{color:var(--gold-ink)}
+.audgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:2.2rem}
+a.audcard{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--r-m);padding:1.35rem 1.4rem;transition:transform .22s,box-shadow .22s,border-color .22s}
+a.audcard:hover{transform:translateY(-3px);box-shadow:0 16px 32px -22px rgba(53,9,18,.5);border-color:var(--gold)}
+.audcard .t{font-family:"Fraunces";font-weight:500;font-size:1.18rem;color:var(--crimson)}
+.audcard .d{font-size:.88rem;color:var(--ink-soft);margin-top:.4rem;line-height:1.5}
+.audcard .ar{display:inline-block;margin-top:.7rem;color:var(--gold-ink);font-weight:600;font-size:.85rem}
+.fits{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.6rem 0 0}
+.fits a{text-decoration:none;font-size:.82rem;font-weight:600;color:var(--crimson);
+  border:1px solid var(--line);background:var(--panel);padding:.45rem .85rem;border-radius:3px;
+  transition:border-color .2s,color .2s}
+.fits a:hover{border-color:var(--gold);color:var(--gold-ink)}
+
 /* book detail */
 a.bookc{text-decoration:none;color:inherit;display:block}
 .cover-box.lg{height:430px;width:287px}
@@ -480,16 +496,16 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     </div>
     <div class="talks">
       <article class="talk reveal"><div class="kw"><span class="ix">01</span>Leadership</div>
-        <div><h3>Leadership by Example</h3>
+        <div><h3><a href="talk-leadership-by-example.html">Leadership by Example</a></h3>
         <p>The ten key principles that distinguish genuinely great leaders, illustrated through history and a life in medicine. Based on his book of the same name.</p></div></article>
       <article class="talk reveal"><div class="kw"><span class="ix">02</span>Purpose</div>
-        <div><h3>Happiness and Living with Purpose</h3>
+        <div><h3><a href="talk-happiness-living-with-purpose.html">Happiness and Living with Purpose</a></h3>
         <p>The difference between happiness, joy, and bliss; the practice of gratitude; and what he calls the two most important days of your life.</p></div></article>
       <article class="talk reveal"><div class="kw"><span class="ix">03</span>Health</div>
-        <div><h3>Live Better, Live Longer</h3>
+        <div><h3><a href="talk-live-better-live-longer.html">Live Better, Live Longer</a></h3>
         <p>A physician&#39;s clear-eyed tour of the evidence on diet, screening, supplements, and daily habits, separating what the research supports from what it does not.</p></div></article>
       <article class="talk reveal"><div class="kw"><span class="ix">04</span>Medicine</div>
-        <div><h3>The Top Stories in Medicine</h3>
+        <div><h3><a href="talk-top-stories-in-medicine.html">The Top Stories in Medicine</a></h3>
         <p>The breakthroughs that reshaped human health over the last century, and a grounded look at where medicine is heading in the next fifty years.</p></div></article>
     </div>
     <a class="morelink reveal" href="speaking.html">See full talk descriptions <span class="ar">&rarr;</span></a>
