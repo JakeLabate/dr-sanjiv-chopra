@@ -362,8 +362,9 @@ a.audcard:hover{transform:translateY(-3px);box-shadow:0 16px 32px -22px rgba(53,
 
 /* book detail */
 a.bookc{text-decoration:none;color:inherit;display:block}
-.cover-box.lg{height:430px;width:287px}
-.cover-box.lg.has-img{width:fit-content}
+.cover-box.lg{height:430px;width:287px;max-width:100%}
+.cover-box.lg.has-img{width:100%;max-width:340px;height:auto}
+.cover-box.lg.has-img img.cover{position:relative;height:auto;width:100%;max-width:none;opacity:1}
 .cover-box.lg img.cover{height:430px;max-width:436px}
 .cover-box.lg .plate-title{font-size:1.9rem}
 .bkfacts{margin-top:2rem}
