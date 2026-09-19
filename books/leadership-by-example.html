@@ -458,7 +458,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
 
 /* ============ 3D books ============ */
 .scene3{perspective:1500px;display:block}
-.bk3{position:relative;display:block;transform-style:preserve-3d;transform:rotateY(-28deg);
+.bk3{position:relative;display:block;transform-style:preserve-3d;transform:rotateY(-14deg);
   transition:transform .65s cubic-bezier(.2,.85,.3,1.08);text-decoration:none}
 .bk3 .f3,.bk3 .b3,.bk3 .s3,.bk3 .p3{position:absolute}
 .bk3 .f3{inset:0;transform:translateZ(var(--bd,17px));border-radius:2px 5px 5px 2px;overflow:hidden;
@@ -479,24 +479,21 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
   transition:transform .65s,opacity .65s}
 /* A: standing volume on detail + feature */
 .scene3.lg3{padding:6px 0 0 20px}
-.scene3.lg3:hover .bk3,.scene3.lg3:focus-within .bk3{transform:rotateY(-8deg) translateY(-12px)}
+.scene3.lg3:hover .bk3,.scene3.lg3:focus-within .bk3{transform:rotateY(0deg) translateY(-10px)}
 .scene3.lg3:hover .bk3-shadow{transform:scaleX(1.1);opacity:.72}
 /* B: shelf pull */
 .shelf{perspective:1600px;padding-top:30px;padding-left:44px;padding-bottom:26px;align-items:center}
 .shelf .bookc{width:var(--slot,104px)}
-.shelf .bk3{transform:rotateY(-62deg);margin:0 auto}
+.shelf .bk3{transform:rotateY(-18deg);margin:0 auto}
 .shelf .bookc:hover .bk3,.shelf .bookc:focus-visible .bk3{
-  transform:rotateY(-14deg) translateZ(74px) translateY(-10px)}
+  transform:rotateY(0deg) translateZ(34px) translateY(-8px)}
 .shelf .bookc:hover,.shelf .bookc:focus-visible{z-index:6}
 .shelf .bookc{position:relative}
 .shelf .meta{margin-top:1.1rem}
 .shelf .meta .t{font-size:.8rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .shelf .meta .s{font-size:.7rem}
-@media (hover:none){.shelf .bk3{transform:rotateY(-42deg)}
-  .shelf .bookc{width:calc(var(--slot,104px)*1.5)}
-  .scene3.lg3 .bk3{transform:rotateY(-18deg)}}
-@media (prefers-reduced-motion:reduce){.bk3,.bk3-shadow{transition:none}
-  .shelf .bookc:hover .bk3{transform:rotateY(-62deg)}}
+
+@media (prefers-reduced-motion:reduce){.bk3,.bk3-shadow{transition:none}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","image":"https://chopra.jakelabate.com/photos/portrait-2.jpg","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
 </head>
@@ -562,27 +559,27 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <p class="eyebrow reveal">More from the shelf</p>
     <div class="shelf-wrap reveal">
       <button class="shelf-btn prev" type="button" aria-label="Scroll books back">&larr;</button>
-      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><a class="bookc" role="listitem" href="/books/brotherhood" style="--slot:79px" title="Brotherhood">
+      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><a class="bookc" role="listitem" href="/books/brotherhood" style="--slot:152px" title="Brotherhood">
         <span class="scene3"><span class="bk3 crimson" style="width:145px;height:240px;--bd:13px" aria-label="Brotherhood"><span class="s3"><span>Brotherhood</span></span><span class="f3"><img src="/covers/brotherhood.jpg" alt="Cover of Brotherhood" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/two-most-important-days" style="--slot:84px" title="The Two Most Important Days">
+      </a><a class="bookc" role="listitem" href="/books/two-most-important-days" style="--slot:165px" title="The Two Most Important Days">
         <span class="scene3"><span class="bk3 ink" style="width:160px;height:240px;--bd:13px" aria-label="The Two Most Important Days"><span class="s3"><span>The Two Most Important Day</span></span><span class="f3"><img src="/covers/two-most-important-days.jpg" alt="Cover of The Two Most Important Days" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/big-five" style="--slot:84px" title="The Big Five">
+      </a><a class="bookc" role="listitem" href="/books/big-five" style="--slot:164px" title="The Big Five">
         <span class="scene3"><span class="bk3 ink" style="width:159px;height:240px;--bd:13px" aria-label="The Big Five"><span class="s3"><span>The Big Five</span></span><span class="f3"><img src="/covers/big-five.webp" alt="Cover of The Big Five" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/live-better-live-longer" style="--slot:85px" title="Live Better, Live Longer">
+      </a><a class="bookc" role="listitem" href="/books/live-better-live-longer" style="--slot:166px" title="Live Better, Live Longer">
         <span class="scene3"><span class="bk3 crimson" style="width:161px;height:240px;--bd:13px" aria-label="Live Better, Live Longer"><span class="s3"><span>Live Better, Live Longer</span></span><span class="f3"><img src="/covers/live-better-live-longer.webp" alt="Cover of Live Better, Live Longer" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/doctor-chopra-says" style="--slot:94px" title="Doctor Chopra Says">
+      </a><a class="bookc" role="listitem" href="/books/doctor-chopra-says" style="--slot:191px" title="Doctor Chopra Says">
         <span class="scene3"><span class="bk3 ink" style="width:189px;height:240px;--bd:13px" aria-label="Doctor Chopra Says"><span class="s3"><span>Doctor Chopra Says</span></span><span class="f3"><img src="/covers/doctor-chopra-says.jpg" alt="Cover of Doctor Chopra Says" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/is-wine-the-best-medicine" style="--slot:91px" title="Is Wine the Best Medicine?">
+      </a><a class="bookc" role="listitem" href="/books/is-wine-the-best-medicine" style="--slot:184px" title="Is Wine the Best Medicine?">
         <span class="scene3"><span class="bk3 crimson" style="width:180px;height:240px;--bd:13px" aria-label="Is Wine the Best Medicine?"><span class="s3"><span>Is Wine the Best Medicine?</span></span><span class="f3"><img src="/covers/is-wine-the-best-medicine.webp" alt="Cover of Is Wine the Best Medicine?" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/coffee-the-magical-elixir" style="--slot:83px" title="Coffee the Magical Elixir">
+      </a><a class="bookc" role="listitem" href="/books/coffee-the-magical-elixir" style="--slot:160px" title="Coffee the Magical Elixir">
         <span class="scene3"><span class="bk3 ink" style="width:155px;height:240px;--bd:13px" aria-label="Coffee the Magical Elixir"><span class="s3"><span>Coffee the Magical Elixir</span></span><span class="f3"><img src="/covers/coffee-the-magical-elixir.jpg" alt="Cover of Coffee the Magical Elixir" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/conquer-your-diabetes" style="--slot:84px" title="Conquer Your Diabetes">
+      </a><a class="bookc" role="listitem" href="/books/conquer-your-diabetes" style="--slot:165px" title="Conquer Your Diabetes">
         <span class="scene3"><span class="bk3 crimson" style="width:160px;height:240px;--bd:13px" aria-label="Conquer Your Diabetes"><span class="s3"><span>Conquer Your Diabetes</span></span><span class="f3"><img src="/covers/conquer-your-diabetes.webp" alt="Cover of Conquer Your Diabetes" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/letters-to-a-young-doctor" style="--slot:81px" title="Letters to a Young Doctor">
+      </a><a class="bookc" role="listitem" href="/books/letters-to-a-young-doctor" style="--slot:156px" title="Letters to a Young Doctor">
         <span class="scene3"><span class="bk3 ink" style="width:150px;height:240px;--bd:13px" aria-label="Letters to a Young Doctor"><span class="s3"><span>Letters to a Young Doctor</span></span><span class="f3"><img src="/covers/letters-to-a-young-doctor.webp" alt="Cover of Letters to a Young Doctor" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/ignite-the-fire-within" style="--slot:83px" title="Ignite the Fire Within">
+      </a><a class="bookc" role="listitem" href="/books/ignite-the-fire-within" style="--slot:161px" title="Ignite the Fire Within">
         <span class="scene3"><span class="bk3 crimson" style="width:155px;height:240px;--bd:13px" aria-label="Ignite the Fire Within"><span class="s3"><span>Ignite the Fire Within</span></span><span class="f3"><img src="/covers/ignite-the-fire-within.webp" alt="Cover of Ignite the Fire Within" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
-      </a><a class="bookc" role="listitem" href="/books/liver-book" style="--slot:85px" title="The Liver Book">
+      </a><a class="bookc" role="listitem" href="/books/liver-book" style="--slot:166px" title="The Liver Book">
         <span class="scene3"><span class="bk3 ink" style="width:161px;height:240px;--bd:13px" aria-label="The Liver Book"><span class="s3"><span>The Liver Book</span></span><span class="f3"><img src="/covers/liver-book.jpg" alt="Cover of The Liver Book" decoding="async" loading="lazy"></span><span class="p3"></span><span class="b3"></span></span></span>
       </a></div>
       <button class="shelf-btn next" type="button" aria-label="Scroll books forward">&rarr;</button>
