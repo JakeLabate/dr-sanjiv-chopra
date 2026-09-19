@@ -6,8 +6,15 @@
 <title>Coffee the Magical Elixir | Books by Sanjiv Chopra, MD, MACP, FRCP (London)</title>
 <meta name="description" content="Coffee the Magical Elixir: Facts That Will Astound and Perk You Up. A book by Sanjiv Chopra, MD, MACP, FRCP (London).">
 <link rel="canonical" href="https://chopra.jakelabate.com/books/coffee-the-magical-elixir">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#6E1423"><meta property="og:type" content="website"><meta property="og:site_name" content="Sanjiv Chopra, MD, MACP, FRCP (London)"><meta property="og:title" content="Coffee the Magical Elixir | Books by Sanjiv Chopra, MD, MACP, FRCP (London)"><meta property="og:description" content="Coffee the Magical Elixir: Facts That Will Astound and Perk You Up. A book by Sanjiv Chopra, MD, MACP, FRCP (London)."><meta property="og:url" content="https://chopra.jakelabate.com/books/coffee-the-magical-elixir"><meta property="og:image" content="https://chopra.jakelabate.com/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://chopra.jakelabate.com/assets/og.png">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Fraunces";src:url("/fonts/fraunces.woff2") format("woff2");
+  font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("/fonts/fraunces-italic.woff2") format("woff2");
+  font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/inter.woff2") format("woff2");
+  font-weight:100 900;font-style:normal;font-display:swap}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0}
@@ -125,7 +132,7 @@ nav.primary a.active{color:#fff}
 .hero-stats b{display:block;font-family:"Fraunces";font-style:normal;font-weight:500;
   font-variant-numeric:oldstyle-nums;font-size:1.55rem;color:var(--gold-bright);opacity:1;
   line-height:1;margin-bottom:.25rem}
-@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-seal{display:none}}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-seal,.hero-photo{display:none}}
 
 .ptop{color:var(--cream);border-bottom:1px solid var(--keyline);
   background-image:var(--grain),radial-gradient(120% 140% at 85% 0%,#7d1a2a 0%,var(--crimson) 48%,var(--crimson-deep) 100%);
@@ -344,6 +351,39 @@ a.spot-link{text-decoration:none;display:block}
 .shelf-btn.next{right:-14px}
 @media (max-width:900px){.shelf-btn{display:none}}
 
+/* photos */
+.photo-frame{position:relative;border-radius:var(--r-m);overflow:hidden;
+  box-shadow:0 26px 52px -26px rgba(20,5,9,.65)}
+.photo-frame::before{content:"";position:absolute;inset:10px;border:1px solid var(--keyline);
+  border-radius:4px;z-index:2;pointer-events:none}
+.photo-frame img{display:block;width:100%;height:auto}
+.hero-photo{width:min(300px,34vw)}
+.ptop-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.ptop-photo{width:min(240px,28vw)}
+@media (max-width:700px){.ptop-grid{grid-template-columns:1fr}.ptop-photo{width:210px}}
+
+/* video embed */
+.video{aspect-ratio:16/9;border-radius:var(--r-m);overflow:hidden;margin:1.6rem 0;
+  box-shadow:0 20px 44px -24px rgba(20,5,9,.6);background:#000;position:relative;z-index:3}
+.video iframe{width:100%;height:100%;border:0;display:block}
+
+/* chips (non-link) */
+.fits span{font-size:.82rem;font-weight:600;color:var(--ink-soft);
+  border:1px solid var(--line);background:var(--panel);padding:.45rem .85rem;border-radius:3px}
+
+/* contact form */
+.cform label{display:block;font-size:.74rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold-ink);margin:1.2rem 0 .4rem}
+.cform input,.cform textarea{width:100%;font-family:"Inter";font-size:1rem;color:var(--ink);
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-s);
+  padding:.8rem .9rem;transition:border-color .2s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--gold)}
+.cform textarea{min-height:160px;resize:vertical}
+.cform .btn{border:0;cursor:pointer;margin-top:1.5rem;font-family:"Inter"}
+.sent{display:none;margin-top:1.4rem;padding:1rem 1.2rem;background:var(--paper-2);
+  border-left:3px solid var(--gold);border-radius:0 var(--r-m) var(--r-m) 0;font-size:.95rem}
+.tbd{color:var(--ink-soft);font-style:italic}
+
 /* talks + audiences */
 .talk h3 a{color:inherit;text-decoration:none;transition:color .2s}
 .talk h3 a:hover{color:var(--gold-ink)}
@@ -414,7 +454,7 @@ html.js .reveal{opacity:0;transform:translateY(16px)}
 @media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
 html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","image":"https://chopra.jakelabate.com/photos/portrait-2.jpg","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -428,7 +468,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
     </button>
     <nav class="primary" id="nav" aria-label="Primary">
-      <a href="/about" class="">About<span class="u"></span></a><a href="/speaking/" class="">Speaking<span class="u"></span></a><a href="/books/" class="active">Books<span class="u"></span></a><a href="/big-five" class="">Big Five<span class="u"></span></a><a href="/media" class="">Media<span class="u"></span></a><a href="/quotes" class="">Quotes<span class="u"></span></a>
+      <a href="/about" class="">About<span class="u"></span></a><a href="/speaking/" class="">Speaking<span class="u"></span></a><a href="/books/" class="active">Books<span class="u"></span></a><a href="/big-five" class="">Big Five<span class="u"></span></a><a href="/media" class="">Media<span class="u"></span></a><a href="/quotes" class="">Quotes<span class="u"></span></a><a href="/contact" class="">Contact<span class="u"></span></a>
       <a class="book-btn" href="/#booking">Booking</a>
     </nav>
   </div>
@@ -440,6 +480,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <p class="eyebrow on-dark reveal">Health &#183; 2021</p>
     <h1 class="reveal">Coffee the Magical Elixir</h1>
     <p class="lede reveal">Facts That Will Astound and Perk You Up</p>
+    <div class="fits reveal" style="margin-top:1.3rem"><span>Sanjiv Chopra</span><span>Deepak Chopra</span><span>2021</span><span>Health</span></div>
   </div>
 </section>
 
@@ -465,9 +506,10 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
             <li><b>By</b> Sanjiv Chopra, MD, MACP, FRCP (London)</li>
             <li><b>With</b> Deepak Chopra</li>
             <li><b>First published</b> 2021</li>
+            <li><b>Publisher</b> BookBaby</li>
+            <li><b>ISBN</b> 9781098384333</li>
             <li><a class="morelink" style="margin-top:.2rem" href="https://www.amazon.com/dp/1098384334" rel="noopener nofollow" target="_blank">Buy on Amazon <span class="ar">&rarr;</span></a></li>
             <li><b>Category</b> Health</li>
-            <li><a class="morelink" style="margin-top:.2rem" href="https://sanjivchopra.com" rel="noopener" target="_blank">Official site <span class="ar">&rarr;</span></a></li>
           </ul>
         </aside>
         <a class="morelink reveal" href="/books/">&larr; All books</a>
@@ -617,8 +659,8 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <div class="chan">
       <a class="reveal" href="https://www.creativewell.com/lecture-division/speaker?id=dr-sanjiv-chopra" rel="noopener" target="_blank">
         <div class="k">Keynote booking</div><div class="v">CreativeWell &rarr;</div></a>
-      <a class="reveal" href="https://sanjivchopra.com" rel="noopener" target="_blank">
-        <div class="k">Official site</div><div class="v">sanjivchopra.com</div></a>
+      <a class="reveal" href="/contact">
+        <div class="k">Direct inquiries</div><div class="v">Contact Dr. Chopra</div></a>
       <a class="reveal" href="https://www.facebook.com/DrSanjivChopra" rel="noopener" target="_blank">
         <div class="k">Follow</div><div class="v">Facebook</div></a>
       <a class="reveal" href="https://twitter.com/sanjiv_chopra" rel="noopener" target="_blank">
@@ -647,6 +689,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <a href="/big-five">The Big Five</a>
         <a href="/media">Media</a>
         <a href="/quotes">Quotes</a>
+        <a href="/contact">Contact</a>
         <a href="/#booking">Booking</a>
       </nav>
       <nav class="foot-nav" aria-label="Social">
@@ -655,7 +698,7 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
         <a href="https://www.youtube.com/user/chopraleadership" rel="noopener" target="_blank">YouTube</a>
       </nav>
     </div>
-    <p class="foot-fine">This site presents publicly available information about Sanjiv Chopra, MD, MACP, FRCP (London) for speaking and editorial inquiries. For official updates, visit <a href="https://sanjivchopra.com" rel="noopener" target="_blank">sanjivchopra.com</a>. &copy; 2026.</p>
+    <p class="foot-fine">&copy; 2026 Sanjiv Chopra. All rights reserved. &#183; <a href="/privacy">Privacy</a></p>
     <p class="foot-fine" style="margin-top:.5rem">Site by <a href="https://jakelabate.com" rel="noopener" target="_blank">Jake Labate</a>.</p>
   </div>
 </footer>
