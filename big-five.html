@@ -236,8 +236,7 @@ a.spot-link{text-decoration:none;display:block}
 .tl .t{font-size:.97rem;color:var(--ink-soft);margin-top:.35rem;max-width:58ch;line-height:1.55}
 
 /* big five */
-.five{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem;margin-top:2.6rem}
-@media (min-width:1000px){.five{grid-template-columns:repeat(5,1fr)}}
+.five{display:grid;grid-template-columns:1fr;gap:1.1rem;margin-top:2.6rem;max-width:820px}
 .fcard{border:1px solid var(--line);background:var(--panel);border-radius:var(--r-m);
   padding:1.6rem 1.5rem 1.7rem;transition:transform .25s,box-shadow .25s}
 .fcard:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(53,9,18,.5)}
@@ -494,6 +493,12 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
 .shelf .meta .s{font-size:.7rem}
 
 @media (prefers-reduced-motion:reduce){.bk3,.bk3-shadow{transition:none}}
+.fcard{display:grid;grid-template-columns:78px 1fr;gap:1.3rem;align-items:start}
+.fcard .n{margin:0;padding-top:.15rem;text-align:center}
+.fcard h3{margin:.1rem 0 .45rem}
+.fcard p{max-width:62ch}
+@media (max-width:520px){.fcard{grid-template-columns:54px 1fr;gap:.9rem}
+  .fcard .n{font-size:2.4rem}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sanjiv Chopra","honorificPrefix":"Dr.","honorificSuffix":"MD, MACP, FRCP (London)","image":"https://chopra.jakelabate.com/photos/portrait-2.jpg","jobTitle":"Professor of Medicine","worksFor":{"@type":"CollegeOrUniversity","name":"Harvard Medical School"},"description":"Professor of Medicine at Harvard Medical School, best-selling author, and keynote speaker on leadership, healthy living, and living with purpose.","url":"https://chopra.jakelabate.com/","sameAs":["https://sanjivchopra.com","https://www.ted.com/talks/sanjiv_chopra_dharma_happiness_and_living_with_purpose","https://www.facebook.com/DrSanjivChopra","https://twitter.com/sanjiv_chopra","https://www.youtube.com/user/chopraleadership"],"award":["Master, American College of Physicians (2009)","Ellis Island Medal of Honor (2012)","Fellow, Royal College of Physicians London (2021)","Great Immigrants, Great Americans, Andrew Carnegie Foundation (2026)"]}</script>
 </head>
@@ -532,16 +537,16 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     </div>
 
     <div class="five">
-      <div class="fcard reveal"><div class="n">1</div><h3>Coffee</h3>
-        <p>Large studies associate regular coffee drinking with lower risks of liver disease, type 2 diabetes, and other chronic conditions, a body of evidence Dr. Chopra, a hepatologist, finds strong enough to celebrate. What you stir into the cup is another matter.</p></div>
-      <div class="fcard reveal"><div class="n">2</div><h3>Vitamin D</h3>
-        <p>Technically a hormone rather than a vitamin, and widely deficient in modern indoor life. Adequate levels are tied to bone health and implicated across a surprising range of conditions; sunlight, food, and sensible supplementation all play a part.</p></div>
-      <div class="fcard reveal"><div class="n">3</div><h3>Exercise</h3>
-        <p>If exercise were a pill, he likes to note, everyone would take it. The data behind regular movement is the deepest in all of preventive medicine, and it does not demand a marathon: brisk walking counts.</p></div>
-      <div class="fcard reveal"><div class="n">4</div><h3>Nuts</h3>
-        <p>A daily handful of nuts is associated in large cohort studies with lower cardiovascular risk and reduced mortality. Almonds, walnuts, pistachios: the research is remarkably consistent across varieties.</p></div>
-      <div class="fcard reveal"><div class="n">5</div><h3>Meditation</h3>
-        <p>A short daily practice is linked to reduced stress and measurable physiological change, with intriguing research on cellular aging. Dr. Chopra&#39;s prescription is modest: meditate once a day, and on the hard days, twice.</p></div>
+      <div class="fcard reveal"><div class="n">1</div><div><h3>Coffee</h3>
+        <p>Large studies associate regular coffee drinking with lower risks of liver disease, type 2 diabetes, and other chronic conditions, a body of evidence Dr. Chopra, a hepatologist, finds strong enough to celebrate. What you stir into the cup is another matter.</p></div></div>
+      <div class="fcard reveal"><div class="n">2</div><div><h3>Vitamin D</h3>
+        <p>Technically a hormone rather than a vitamin, and widely deficient in modern indoor life. Adequate levels are tied to bone health and implicated across a surprising range of conditions; sunlight, food, and sensible supplementation all play a part.</p></div></div>
+      <div class="fcard reveal"><div class="n">3</div><div><h3>Exercise</h3>
+        <p>If exercise were a pill, he likes to note, everyone would take it. The data behind regular movement is the deepest in all of preventive medicine, and it does not demand a marathon: brisk walking counts.</p></div></div>
+      <div class="fcard reveal"><div class="n">4</div><div><h3>Nuts</h3>
+        <p>A daily handful of nuts is associated in large cohort studies with lower cardiovascular risk and reduced mortality. Almonds, walnuts, pistachios: the research is remarkably consistent across varieties.</p></div></div>
+      <div class="fcard reveal"><div class="n">5</div><div><h3>Meditation</h3>
+        <p>A short daily practice is linked to reduced stress and measurable physiological change, with intriguing research on cellular aging. Dr. Chopra&#39;s prescription is modest: meditate once a day, and on the hard days, twice.</p></div></div>
     </div>
 
     <p class="note reveal">This page summarizes themes from Dr. Chopra&#39;s published work for general interest. It is not individual medical advice; decisions about diet, supplements, and exercise belong in a conversation with your own physician.</p>
