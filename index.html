@@ -314,6 +314,32 @@ a.spot-link{text-decoration:none;display:block}
 .foot-fine a{color:var(--gold-bright);text-decoration:none}
 @media (max-width:620px){.foot-top{grid-template-columns:1fr;text-align:center;justify-items:center}}
 
+/* shelf scroller */
+.shelf-wrap{position:relative}
+.shelf{display:flex;gap:1.15rem;overflow-x:auto;scroll-snap-type:x proximity;
+  padding:.3rem .2rem 1.1rem;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.shelf::-webkit-scrollbar{height:8px}
+.shelf::-webkit-scrollbar-track{background:var(--paper-2);border-radius:4px}
+.shelf::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+.bookc{flex:0 0 190px;scroll-snap-align:start}
+.cover-box{position:relative;aspect-ratio:2/3;border-radius:var(--r-s);overflow:hidden;
+  box-shadow:0 12px 30px -18px rgba(53,9,18,.6);transition:transform .28s,box-shadow .28s}
+.bookc:hover .cover-box{transform:translateY(-5px);box-shadow:0 22px 44px -20px rgba(53,9,18,.7)}
+.cover-box .plate{position:absolute;inset:0;min-height:0}
+.cover-box img.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4}
+.bookc .meta{padding:.8rem .15rem 0}
+.bookc .meta .t{font-family:"Fraunces";font-weight:500;font-size:1rem;line-height:1.2;color:var(--ink)}
+.bookc .meta .s{font-size:.72rem;color:var(--ink-soft);margin-top:.3rem;letter-spacing:.02em}
+.shelf-btn{position:absolute;top:38%;transform:translateY(-50%);z-index:6;width:42px;height:42px;
+  border-radius:50%;border:1px solid var(--keyline);background:var(--crimson);color:var(--cream);
+  font-size:1.05rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px -10px rgba(53,9,18,.7);transition:background .2s}
+.shelf-btn:hover{background:var(--crimson-deep)}
+.shelf-btn.prev{left:-14px}
+.shelf-btn.next{right:-14px}
+@media (max-width:900px){.shelf-btn{display:none}}
+
 /* post-nominals */
 .postnoms{display:block;font-family:"Inter";font-weight:600;font-size:clamp(.78rem,1.3vw,.95rem);
   letter-spacing:.14em;color:var(--gold-bright);margin-top:.6rem}
@@ -481,47 +507,146 @@ html.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transfor
     <div class="head-2col">
       <div>
         <p class="eyebrow reveal">04 &#183; Books</p>
-        <h2 class="big reveal">Selected books</h2>
+        <h2 class="big reveal">The books</h2>
       </div>
       <p class="lede reveal">More than fifteen titles spanning medicine, leadership, well-being, and memoir, with his seventeenth on the way.</p>
     </div>
-    <div class="books">
-      <article class="book reveal">
-        <div class="plate crimson">
-          <span class="plate-kicker">Memoir</span>
-          <span class="plate-title">Brotherhood</span>
-          <span class="plate-sub">with Deepak Chopra &#183; 2013</span>
-          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+    <div class="shelf-wrap reveal">
+      <button class="shelf-btn prev" type="button" aria-label="Scroll books back">&larr;</button>
+      <div class="shelf" role="list" aria-label="Books by Sanjiv Chopra"><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate crimson">
+            <span class="plate-kicker">Memoir</span>
+            <span class="plate-title">Brotherhood</span>
+            <span class="plate-sub">with Deepak Chopra &#183; 2013</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          <img class="cover" src="https://covers.openlibrary.org/b/id/11363658-L.jpg" alt="Cover of Brotherhood" loading="lazy" onerror="this.remove()">
         </div>
-        <div class="meta"><p>A double memoir of two brothers who emigrated from India and rose to the heights of Western and mind-body medicine.</p></div>
-      </article>
-      <article class="book reveal">
-        <div class="plate ink">
-          <span class="plate-kicker">Leadership</span>
-          <span class="plate-title">Leadership by Example</span>
-          <span class="plate-sub">The Ten Key Principles</span>
-          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+        <div class="meta"><div class="t">Brotherhood</div><div class="s">with Deepak Chopra &#183; 2013</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate ink">
+            <span class="plate-kicker">Purpose</span>
+            <span class="plate-title">The Two Most Important Days</span>
+            <span class="plate-sub">with Gina Vild &#183; 2017</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          <img class="cover" src="https://covers.openlibrary.org/b/id/8881787-L.jpg" alt="Cover of The Two Most Important Days" loading="lazy" onerror="this.remove()">
         </div>
-        <div class="meta"><p>Ten core principles of effective leadership, drawn from history and a career mentoring physicians.</p></div>
-      </article>
-      <article class="book reveal">
-        <div class="plate crimson">
-          <span class="plate-kicker">Purpose</span>
-          <span class="plate-title">The Two Most Important Days</span>
-          <span class="plate-sub">with Gina Vild &#183; 2017</span>
-          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+        <div class="meta"><div class="t">The Two Most Important Days</div><div class="s">with Gina Vild &#183; 2017</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate crimson">
+            <span class="plate-kicker">Leadership</span>
+            <span class="plate-title">Leadership by Example</span>
+            <span class="plate-sub">with David Fisher &#183; 2012</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          <img class="cover" src="https://covers.openlibrary.org/b/id/9508231-L.jpg" alt="Cover of Leadership by Example" loading="lazy" onerror="this.remove()">
         </div>
-        <div class="meta"><p>On finding your purpose, and living a happier, healthier life.</p></div>
-      </article>
-      <article class="book reveal">
-        <div class="plate ink">
-          <span class="plate-kicker">Health</span>
-          <span class="plate-title">The Big Five</span>
-          <span class="plate-sub">with David Fisher</span>
-          <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+        <div class="meta"><div class="t">Leadership by Example</div><div class="s">with David Fisher &#183; 2012</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate ink">
+            <span class="plate-kicker">Health</span>
+            <span class="plate-title">The Big Five</span>
+            <span class="plate-sub">with David Fisher &#183; 2016</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
         </div>
-        <div class="meta"><p>Five simple, evidence-backed habits that meaningfully improve health and longevity.</p></div>
-      </article>
+        <div class="meta"><div class="t">The Big Five</div><div class="s">with David Fisher &#183; 2016</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate crimson">
+            <span class="plate-kicker">Health</span>
+            <span class="plate-title">Live Better, Live Longer</span>
+            <span class="plate-sub">2012</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
+        </div>
+        <div class="meta"><div class="t">Live Better, Live Longer</div><div class="s">2012</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate ink">
+            <span class="plate-kicker">Medicine</span>
+            <span class="plate-title">Doctor Chopra Says</span>
+            <span class="plate-sub">with Alan Lotvin and David Fisher &#183; 2010</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
+        </div>
+        <div class="meta"><div class="t">Doctor Chopra Says</div><div class="s">with Alan Lotvin and David Fisher &#183; 2010</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate crimson">
+            <span class="plate-kicker">Medicine</span>
+            <span class="plate-title">Is Wine the Best Medicine?</span>
+            <span class="plate-sub">with Alan Lotvin and David Fisher &#183; 2011</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
+        </div>
+        <div class="meta"><div class="t">Is Wine the Best Medicine?</div><div class="s">with Alan Lotvin and David Fisher &#183; 2011</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate ink">
+            <span class="plate-kicker">Health</span>
+            <span class="plate-title">Coffee the Magical Elixir</span>
+            <span class="plate-sub">with Deepak Chopra &#183; 2021</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          <img class="cover" src="https://covers.openlibrary.org/b/id/14754664-L.jpg" alt="Cover of Coffee the Magical Elixir" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="meta"><div class="t">Coffee the Magical Elixir</div><div class="s">with Deepak Chopra &#183; 2021</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate crimson">
+            <span class="plate-kicker">Medicine</span>
+            <span class="plate-title">Conquer Your Diabetes</span>
+            <span class="plate-sub">with Martin Abrahamson</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
+        </div>
+        <div class="meta"><div class="t">Conquer Your Diabetes</div><div class="s">with Martin Abrahamson</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate ink">
+            <span class="plate-kicker">Medicine</span>
+            <span class="plate-title">Letters to a Young Doctor</span>
+            <span class="plate-sub">with Pankaj Vij</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
+        </div>
+        <div class="meta"><div class="t">Letters to a Young Doctor</div><div class="s">with Pankaj Vij</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate crimson">
+            <span class="plate-kicker">Inspiration</span>
+            <span class="plate-title">Ignite the Fire Within</span>
+            <span class="plate-sub">with Rick Najera</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          
+        </div>
+        <div class="meta"><div class="t">Ignite the Fire Within</div><div class="s">with Rick Najera</div></div>
+      </div><div class="bookc" role="listitem">
+        <div class="cover-box">
+          <div class="plate ink">
+            <span class="plate-kicker">Reference</span>
+            <span class="plate-title">The Liver Book</span>
+            <span class="plate-sub">2001</span>
+            <svg class="plate-seal" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/><text x="100" y="132" text-anchor="middle" font-family="Fraunces" font-weight="500" font-size="86" fill="currentColor">SC</text></svg>
+          </div>
+          <img class="cover" src="https://covers.openlibrary.org/b/id/475780-L.jpg" alt="Cover of The Liver Book" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="meta"><div class="t">The Liver Book</div><div class="s">2001</div></div>
+      </div></div>
+      <button class="shelf-btn next" type="button" aria-label="Scroll books forward">&rarr;</button>
     </div>
     <a class="morelink reveal" href="books.html">Browse all books <span class="ar">&rarr;</span></a>
   </div>
@@ -595,6 +720,12 @@ document.documentElement.classList.add('js');
   if(t&&n){t.addEventListener('click',function(){
     var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);
     t.setAttribute('aria-label',o?'Close menu':'Open menu');});}
+  document.querySelectorAll('.shelf-wrap').forEach(function(w){
+    var s=w.querySelector('.shelf'),p=w.querySelector('.shelf-btn.prev'),n=w.querySelector('.shelf-btn.next');
+    if(!s||!p||!n)return;
+    p.addEventListener('click',function(){s.scrollBy({left:-s.clientWidth*.8,behavior:'smooth'});});
+    n.addEventListener('click',function(){s.scrollBy({left:s.clientWidth*.8,behavior:'smooth'});});
+  });
   var els=document.querySelectorAll('.reveal');
   if('IntersectionObserver'in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
