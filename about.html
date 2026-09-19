@@ -713,7 +713,7 @@ document.documentElement.classList.add('js');
       requestAnimationFrame(function(){
         var y = window.scrollY;
         if(y < 12) cb.classList.remove('crumb-hide');
-        else if(y > last + 6) cb.classList.add('crumb-hide');
+        else if(y > last + 6 && y > 140) cb.classList.add('crumb-hide');
         else if(y < last - 6) cb.classList.remove('crumb-hide');
         last = y; tick = false;
       });
