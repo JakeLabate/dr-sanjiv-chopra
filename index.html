@@ -110,15 +110,12 @@ nav.primary a.active{color:#fff}
   background-size:130px 130px,auto;background-blend-mode:soft-light,normal}
 .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.18) 100%)}
-.hero .container{position:relative;z-index:2;padding-top:clamp(3.5rem,8vw,6rem);
-  padding-bottom:clamp(3.5rem,8vw,6rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2rem,5vw,4rem);align-items:center}
-.hero h1{font-size:clamp(2.9rem,7.3vw,5.6rem);font-weight:500;color:#fff;margin:0 0 .22em}
-.hero .sub{font-family:"Fraunces";font-style:italic;font-weight:400;
-  font-size:clamp(1.3rem,2.7vw,2.05rem);line-height:1.22;color:var(--gold-bright);
-  max-width:30ch;text-wrap:balance;margin:0 0 1.4rem}
+.hero .container{position:relative;z-index:2;padding-top:clamp(2.8rem,5.5vw,4.2rem);
+  padding-bottom:clamp(2.8rem,5.5vw,4.2rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(2rem,5vw,4rem);align-items:start}
+.hero h1{font-size:clamp(2.9rem,7.3vw,5.6rem);font-weight:500;color:#fff;margin:0 0 .3em}
 .hero .lede{color:var(--cream);max-width:46ch;opacity:.92}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.9rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.6rem}
 .btn{text-decoration:none;font-weight:600;font-size:.97rem;padding:.85rem 1.5rem;border-radius:var(--r-s);
   transition:transform .2s,background .2s,color .2s,border-color .2s;display:inline-block}
 .btn-gold{background:var(--gold);color:var(--crimson-ink)}
@@ -126,7 +123,7 @@ nav.primary a.active{color:#fff}
 .btn-ghost{border:1.5px solid rgba(244,236,221,.45);color:var(--cream)}
 .btn-ghost:hover{border-color:var(--gold-bright);color:#fff;transform:translateY(-2px)}
 .hero-seal{width:min(230px,32vw);height:min(230px,32vw);color:var(--cream)}
-.hero-stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.6rem;padding-top:1.6rem;
+.hero-stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2rem;padding-top:1.4rem;
   border-top:1px solid var(--line-dark)}
 .hero-stats div{font-size:.85rem;color:var(--cream);opacity:.9}
 .hero-stats b{display:block;font-family:"Fraunces";font-style:normal;font-weight:500;
@@ -588,7 +585,6 @@ a.btn .ar{margin-left:.3rem}
       <div>
         <p class="eyebrow on-dark reveal">Professor of Medicine &#183; Harvard Medical School</p>
         <h1 class="reveal">Sanjiv Chopra<span class="postnoms">MD, MACP, FRCP (London)</span></h1>
-        <p class="sub reveal">A hepatologist, <span class="nb">best-selling</span> author, and keynote speaker.</p>
         <p class="lede reveal">For four decades he has taught medicine at Harvard. For nearly as long he has carried a second message to audiences in more than twenty-five countries: that a life of meaning is built on a few deliberate principles.</p>
         <div class="hero-cta reveal">
           <a class="btn btn-gold" href="#booking">Inquire about a keynote</a>
